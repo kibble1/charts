@@ -3,11 +3,11 @@ entries:
   clickhouse:
   - apiVersion: v1
     appVersion: "19.14"
-    created: "2021-06-10T19:16:34.031231536Z"
+    created: "2021-06-10T19:43:10.257452736Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
-    digest: 20a670ac90bc3a69b2d2b13b2ce9ce0c4fb93f1fab584493268b16b1f4afa7e4
+    digest: 885a7ff6e5750fb66e8ef7ec640493147468c995e0c800929297bbe87b959da3
     home: https://clickhouse.yandex/
     icon: https://clickhouse.yandex/images/logo.png
     keywords:
@@ -23,7 +23,43 @@ entries:
   sentry:
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-06-10T19:16:34.055365011Z"
+    created: "2021-06-10T19:43:10.310594009Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: ad40ba5665fc6e91aa9dd5a502002003fc802ccc2a9ccd8d2a8fbd23810c7024
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.3.3.tgz
+    version: 11.3.3
+  - apiVersion: v2
+    appVersion: 21.5.1
+    created: "2021-06-10T19:43:10.284472297Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -60,7 +96,7 @@ entries:
   sentry-kubernetes:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-06-10T19:16:34.055737806Z"
+    created: "2021-06-10T19:43:10.311243844Z"
     description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
     digest: 421d4d783dd4b4ec6a606a2a37c6ee3912abc048d746b398e40636fff38e5f91
     home: https://github.com/getsentry/sentry-kubernetes
@@ -76,4 +112,4 @@ entries:
     urls:
     - https://sentry-kubernetes.github.io/charts/sentry-kubernetes-0.3.1.tgz
     version: 0.3.1
-generated: "2021-06-10T19:16:34.029114464Z"
+generated: "2021-06-10T19:43:10.255707941Z"
