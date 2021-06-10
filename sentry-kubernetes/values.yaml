@@ -6,7 +6,7 @@ sentry:
 # Sentry DSN config using an existing secret:
 # existingSecret:
 image:
-  repository: getsentry/sentry-kubernetes
+  repository: amr-cache-registry.caas.intel.com/cache/getsentry/sentry-kubernetes
   tag: latest
   pullPolicy: Always
 resources: {}

@@ -54,7 +54,7 @@ relay:
   volumes: [ ]
 
 sentry:
-  singleOrganization: true
+  singleOrganization: false
   web:
     # if using filestore backend filesystem with RWO access, set strategyType to Recreate
     strategyType: RollingUpdate
