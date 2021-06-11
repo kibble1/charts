@@ -3,7 +3,7 @@ entries:
   clickhouse:
   - apiVersion: v1
     appVersion: "19.14"
-    created: "2021-06-11T16:07:06.944144417Z"
+    created: "2021-06-11T16:32:35.835930468Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
@@ -23,9 +23,14 @@ entries:
   guacamole:
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-06-11T16:07:06.945648125Z"
+    created: "2021-06-11T16:32:35.840084895Z"
+    dependencies:
+    - condition: mysql.enabled
+      name: mysql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.6.2
     description: A remote desktop frontend
-    digest: 845902eda084fdfccf64485ac997ba204c0a8e021f28ed4458f20c4e04ef85d8
+    digest: 5c0df9ea36ab1d5b14c04d2af8f50401caa21588a3ef34d06b2f43c92e454b94
     home: https://guacamole.apache.org
     icon: https://guacamole.apache.org/images/guacamole-logo-64.png
     name: guacamole
@@ -35,7 +40,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-06-11T16:07:06.944920673Z"
+    created: "2021-06-11T16:32:35.836707573Z"
     description: A remote desktop frontend
     digest: c6a331779dd5d963d62ef09041966fd72c331087ac910bcc3f2e4e79f9e2843c
     name: guacamole
@@ -46,7 +51,7 @@ entries:
   sentry:
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-06-11T16:07:07.000867695Z"
+    created: "2021-06-11T16:32:35.891080124Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -74,7 +79,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 6.0.5
     description: A Helm chart for Kubernetes
-    digest: 42d089c04139cb02b57912f615b3eae2da4a01fa8bc6f9719ac5cf6ad42ae2ad
+    digest: 954b2b55ca6a7a5cb7f79a471f9f78dfb14fa70f3e9c9fa1367cc4ca150c05ac
     icon: https://www.sentry.dev/_assets2/favicon.ico
     name: sentry
     type: application
@@ -83,7 +88,7 @@ entries:
     version: 11.3.3
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-06-11T16:07:06.974359389Z"
+    created: "2021-06-11T16:32:35.863372945Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -120,7 +125,7 @@ entries:
   sentry-kubernetes:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-06-11T16:07:07.001342429Z"
+    created: "2021-06-11T16:32:35.891488127Z"
     description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
     digest: 233c575ab9e3eb3f63ee347cf32d3719b22e6546952a160cf253b32f895b5b83
     home: https://github.com/getsentry/sentry-kubernetes
@@ -136,4 +141,4 @@ entries:
     urls:
     - https://kibble1.github.io/charts/sentry-kubernetes-0.3.1.tgz
     version: 0.3.1
-generated: "2021-06-11T16:07:06.942120471Z"
+generated: "2021-06-11T16:32:35.83304265Z"
