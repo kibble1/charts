@@ -44,7 +44,8 @@ clickhouse:
   metrics:
     enabled: false
     image:
-      repository: amr-cache-registry.caas.intel.com/cache/f1yegor/clickhouse-exporter
+      registry: docker.io
+      repository: f1yegor/clickhouse-exporter
       tag: latest
       pullPolicy: IfNotPresent
       port: 9116
@@ -104,7 +105,7 @@ clickhouse:
   ## The instance number of Clickhouse
   replicas: "3"
   ## Clickhouse image configuration.
-  image: "amr-cache-registry.caas.intel.com/cache/yandex/clickhouse-server"
+  image: "yandex/clickhouse-server"
   imageVersion: "19.14"
   imagePullPolicy: "IfNotPresent"
 
@@ -112,7 +113,7 @@ clickhouse:
   resources: {}
 
   init:
-    image: "amr-cache-registry.caas.intel.com/cache/busybox"
+    image: "busybox"
     imageVersion: "1.31.0"
     imagePullPolicy: "IfNotPresent"
   #imagePullSecrets:
@@ -211,6 +212,9 @@ clickhouse:
     ##
     ## Uncomment to disable ClickHouse internal DNS caching.
     disable_internal_dns_cache: "1"
+    ##
+    ## Limits total RAM usage by the ClickHouse server. (0 is Auto)
+    #max_server_memory_usage: "0"
     ##
     ## The maximum number of open files.
     ## We recommend using this option in Mac OS X, since the getrlimit() function returns an incorrect value.
@@ -369,7 +373,7 @@ tabix:
     maxUnavailable: 1
   ##
   ## Docker image name.
-  image: "amr-cache-registry.caas.intel.com/cache/spoonest/clickhouse-tabix-web-client"
+  image: "spoonest/clickhouse-tabix-web-client"
   ##
   ## Docker image version
   imageVersion: "stable"
