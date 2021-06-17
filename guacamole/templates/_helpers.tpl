@@ -35,20 +35,13 @@ Create chart name and version as used by the chart label.
 Common labels
 */}}
 {{- define "guacamole.labels" -}}
+app.kubernetes.io/name: {{ include "guacamole.name" . }}
 helm.sh/chart: {{ include "guacamole.chart" . }}
-{{ include "guacamole.selectorLabels" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
-{{- end -}}
-
-{{/*
-Selector labels
-*/}}
-{{- define "guacamole.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "guacamole.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
 
 {{/*
