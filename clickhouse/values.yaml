@@ -106,7 +106,7 @@ clickhouse:
   replicas: "3"
   ## Clickhouse image configuration.
   image: "yandex/clickhouse-server"
-  imageVersion: "19.14"
+  imageVersion: "21.6.5.37-stable"
   imagePullPolicy: "IfNotPresent"
 
   ## The resource limits and requests used by clickhouse

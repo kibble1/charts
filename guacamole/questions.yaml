@@ -1,0 +1,11 @@
+questions:
+  - variable: mysql.MYSQL_USER
+    default: "guacamole"
+    description: "Define Guacamole Database User"
+    required: true
+    label: "Guacamole Database User"
+  - variable: mysql.MYSQL_PASSWORD
+    default: "changeme!"
+    description: "Define Guacamole Database User Password"
+    required: true
+    label: "Guacamole Database User Password"

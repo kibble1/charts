@@ -3,8 +3,8 @@ name: sentry
 description: A Helm chart for Kubernetes
 icon: https://www.sentry.dev/_assets2/favicon.ico
 type: application
-version: 11.3.3
-appVersion: 21.5.1
+version: 11.4.0
+appVersion: 21.6.1
 dependencies:
   - name: redis
     repository: https://charts.bitnami.com/bitnami
@@ -15,8 +15,9 @@ dependencies:
     version: 12.0.0
     condition: kafka.enabled
   - name: clickhouse
-    repository: https://sentry-kubernetes.github.io/charts
-    version: 3.0.0
+    # repository: https://sentry-kubernetes.github.io/charts
+    repository: https://kibble1.github.io/charts/
+    version: 3.0.1
     condition: clickhouse.enabled
   - name: rabbitmq
     repository: https://charts.bitnami.com/bitnami

@@ -1,32 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: C:\ProgramData\chocolatey\bin\kompose.exe convert -c
-    kompose.version: 1.21.0 (992df58d8)
-  creationTimestamp: null
-  labels:
-    io.kompose.service: guacd
   name: guacd
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      io.kompose.service: guacd
+  replicas: "{{ .Values.replicaCount }}"
   strategy:
     type: Recreate
-  template:
-    metadata:
-      annotations:
-        kompose.cmd: C:\ProgramData\chocolatey\bin\kompose.exe convert -c
-        kompose.version: 1.21.0 (992df58d8)
-      creationTimestamp: null
-      labels:
-        io.kompose.service: guacd
     spec:
       containers:
-      - image: guacamole/guacd
-        imagePullPolicy: ""
+      - image: "{{ .Values.guacd.image.repository }}"
+        imagePullPolicy: "{{ .Values.guacd.image.pullPolicy }}"
         name: guacd
         resources: {}
         volumeMounts:
@@ -34,9 +17,9 @@ spec:
           name: guacd-claim0
         - mountPath: /record
           name: guacd-claim1
-      hostname: guacd
-      restartPolicy: Always
-      serviceAccountName: ""
+      hostname: "{{ .Values.guacd.HostName }}"
+      restartPolicy: "{{ .Values.guacd.image.restartPolicy }}"
+      serviceAccountName: "{{ template "guacamole.serviceAccountName" . }}"
       volumes:
       - name: guacd-claim0
         persistentVolumeClaim:
