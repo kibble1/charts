@@ -1,0 +1,29 @@
+questions:
+  - variable: env.Public.MAIL_DRIVER
+    default: "smtp"
+    required: true
+  - variable: env.Public.MAIL_HOST
+    required: true
+  - variable: env.Public.MAIL_ADDRESS
+    required: true
+  - variable: env.Public.MAIL_PORT
+    default: 25
+    required: true
+  - variable: env.Public.MAIL_NAME
+    default: null
+    required: false
+  - variable: env.Public.MAIL_ENCRYPTION
+    default: null
+    required: false
+  - variable: env.Private.APP_KEY
+    default: null
+    required: false
+  - variable: env.Private.DB_PASSWORD
+    default: null
+    required: true
+  - variable: env.Private.MAIL_USERNAME
+    default: null
+    required: false
+  - variable: env.Private.MAIL_PASSWORD
+    default: null
+    required: false
