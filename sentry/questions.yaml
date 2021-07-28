@@ -1,0 +1,277 @@
+questions:
+  - variable: user.create
+    description: "if true, creates a default admin user defined from email and password"
+    default: true
+    type: boolean
+    required: false
+    label: "Default admin user"
+    show_subquestion_if: false
+    group: "Admin User Settings"
+    subquestions:
+      - variable: user.email
+        description: "Admin User Email"
+        default: "admin@sentry.local"
+        type: string
+        required: true
+        label: "Admin User Email"
+      - variable: user.password
+        description: "Admin User Password"
+        default: "aaaa"
+        type: password
+        required: true
+        label: "Admin User Password"
+  - variable: asHook
+    description: "this is required on the first installation, as sentry has to be initialized first recommended to set false for updating the helm chart afterwards, as you will have some downtime on each update if it's a hook deploys relay & snuba consumers as post hooks"
+    default: true
+    type: boolean
+    required: true
+    label: "Install with hook"
+  - variable: sentry.singleOrganization
+    description: "Configure Sentry for single or multiple organizations"
+    default: true
+    type: boolean
+    required: false
+    label: "Sentry Single Organization"
+  - variable: ingress.enabled
+    description: "Enabling Ingress"
+    default: false
+    type: boolean
+    required: false
+    label: "Enabling Ingress"
+    show_subquestion_if: true
+    group: "Ingress Settings"
+    subquestions:
+      - variable: ingress.regexPathStyle
+        description: "Allows setting the style the regex paths are rendered in the ingress for the ingress controller in use."
+        default: "nginx"
+        type: enum
+        required: true
+        label: "Regex paths for the ingress controller in use."
+        options:
+          - "nginx"
+          - "aws-alb"
+          - "gke"
+          - "traefik"
+        show_subquestion_if: "aws-alb"
+        group: "AWS ALB Settings"
+        subquestions:
+          - variable: ingress.alb.httpRedirect
+            description: "AWS ALB Ingress controller, switch to true if you want activate the http to https redirection."
+            default: false
+            type: boolean
+            required: false
+            label: "AWS ALB Ingress controller"
+  - variable: nginx.enabled
+    description: "Enabling NGINX"
+    default: true
+    type: boolean
+    required: false
+    label: "Enabling NGINX"
+  - variable: metrics.enabled
+    description: "if true, enable Prometheus metrics"
+    default: false
+    type: boolean
+    required: false
+    label: "Enable Prometheus Metrics"
+    show_subquestion_if: true
+    group: "Metrics Settings"
+    subquestions:
+    - variable: metrics.image.repository
+      description: "Metrics exporter image repository"
+      default: prom/statsd-exporter
+      type: string
+      required: true
+      label: "Metrics exporter image repository"
+    - variable: metrics.image.tag
+      description: "Metrics exporter image tag"
+      default: "v0.10.5"
+      type: string
+      required: true
+      label: "Metrics exporter image tag"
+    - variable: metrics.image.PullPolicy
+      description: "Metrics exporter image pull policy"
+      default: IfNotPresent
+      type: enum
+      required: true
+      label: "Metrics exporter image pull policy"
+      options:
+        - IfNotPresent
+        - Always
+        - Never
+    - variable: metrics.nodeSelector
+      description: "Node labels for metrics pod assignment"
+      default: ""
+      type: string
+      required: true
+      label: "Node labels for metrics pod assignment"
+    - variable: metrics.tolerations
+      description: "Toleration labels for metrics pod assignment"
+      default: ""
+      type: multiline
+      label: "Toleration labels for metrics pod assignment"
+    - variable: metrics.affinity
+      description: "Affinity settings for metrics"
+      default: ""
+      type: multiline
+      required: true
+      label: "Affinity settings for metrics"
+    - variable: metrics.resources
+      description: "Metrics resource requests/limit"
+      default: ""
+      type: string
+      required: true
+      label: "Metrics resource requests/limit"
+    - variable: metrics.service.annotations
+      description: "annotations for Prometheus metrics service"
+      default: ""
+      type: multiline
+      required: true
+      label: "annotations for Prometheus metrics service"
+    - variable: metrics.service.clusterIP
+      description: "cluster IP address to assign to service (set to '-' to pass an empty value)"
+      default: nil
+      type: string
+      required: true
+      label: "cluster IP address to assign to service"
+    - variable: metrics.service.omitClusterIP
+      description: "(Deprecated) To omit the clusterIP from the metrics service"
+      default: false
+      type: boolean
+      required: false
+      label: "(Deprecated) To omit the clusterIP from the metrics service"
+    - variable: metrics.service.externalIPs
+      description: "Prometheus metrics service external IP addresses"
+      default: ""
+      type: multiline
+      required: true
+      label: "Prometheus metrics service external IP addresses"
+    - variable: metrics.service.additionalLabels
+      description: "labels for metrics service"
+      default: ""
+      type: multiline
+      required: false
+      label: "labels for metrics service"
+    - variable: metrics.service.loadBalancerIP
+      description: "IP address to assign to load balancer (if supported)"
+      default: ""
+      type: multiline
+      required: false
+      label: "IP address to assign to load balancer (if supported)"
+    - variable: metrics.service.loadBalancerSourceRanges
+      description: "list of IP CIDRs allowed access to load balancer (if supported)"
+      default: ""
+      type: multiline
+      required: false
+      label: "list of IP CIDRs allowed access to load balancer (if supported)"
+    - variable: metrics.service.servicePort
+      description: "Prometheus metrics service port"
+      default: 9913
+      type: int
+      required: true
+      label: "Prometheus metrics service port"
+    - variable: metrics.service.type
+      description: "type of Prometheus metrics service to create"
+      default: "ClusterIP"
+      type: enum
+      options:
+        - "ClusterIP"
+        - "NodePort"
+        - "LoadBalancer"
+      required: true
+      label: "type of Prometheus metrics service to create"
+    - variable: metrics.serviceMonitor.enabled
+      descritption: "Set this to true to create ServiceMonitor for Prometheus operator"
+      default: false
+      type: boolean
+      required: true
+      label: "create ServiceMonitor for Prometheus operator"
+    - variable: metrics.serviceMonitor.additionalLabels
+      description: "Additional labels that can be used so ServiceMonitor will be discovered by Prometheus"
+      default: ""
+      type: multiline
+      required: true
+      label: "Additional labels that can be used so ServiceMonitor will be discovered by Prometheus"
+    - variable: metrics.serviceMonitor.honorLabels
+      description: "honorLabels chooses the metric's labels on collisions with target labels."
+      default: false
+      type: boolean
+      required: true
+      label: "honorLabels chooses the metric's labels on collisions with target labels."
+    - variable: metrics.serviceMonitor.namespace
+      description: "namespace where servicemonitor resource should be created	the same namespace as sentry"
+      default: ""
+      type: string
+      required: true
+      label: "Service Monitor Namespace"
+    - variable: metrics.serviceMonitor.scrapeInterval
+      description: "interval between Prometheus scraping"
+      default: "30s"
+      type: string
+      required: true
+      label: "Prometheus Scrape Interval"
+  - variable: serviceAccount.enabled
+    description: "If true, a custom Service Account will be used."
+    default: false
+    type: boolean
+    required: true
+    label: "Use custom Service Account?"
+    show_subquestion_if: true
+    group: "Service Account Settings"
+    subquestions:
+    - variable: serviceAccount.name
+      description: "The base name of the ServiceAccount to use. Will be appended with e.g. snuba or web for the pods accordingly."
+      default: "sentry"
+      type: string
+      required: true
+      label: "The base name of the ServiceAccount to use"
+    - variable: serviceAccount.automountServiceAccountToken
+      description: "Automount API credentials for a Service Account."
+      default: true
+      type: boolean
+      required: true
+      label: "Automount API credentials for a Service Account."
+    - variable: serviceAccount.annotations
+      description: "Additional Service Account annotations."
+      default: ""
+      type: multiline
+      required: false
+      label: "Additional Service Account annotations."
+  - variable: system.secretKey
+    description: "secret key for the session cookie (documentation)"
+    default: ""
+    type: secret
+    required: true
+    label: "secret key for the session cookie (documentation)"
+  - variable: sentry.features.vstsLimitedScopes
+    description: "Disables the azdo-integrations with limited scopes that is the cause of so much pain"
+    default: true
+    type: boolean
+    required: true
+    label: "Disables the azdo-integrations with limited scopes that is the cause of so much pain"
+  - variable: sentry.web.customCA.secretName
+    description: "Allows mounting a custom CA secret"
+    default: ""
+    type: secret
+    required: true
+    label: "Allows mounting a custom CA secret"
+  - variable: sentry.web.customCA.item
+    description: "Key of CA cert object within the secret"
+    default: "ca.crt"
+    type: string
+    required: true
+    label: "Key of CA cert object within the secret"
+  - variable: symbolicator.api.enabled
+    description: "Enable Symbolicator"
+    default: false
+    type: boolean
+    required: true
+    label: "Enable Symbolicator"
+    show_subquestion_if: true
+    group: "Symbolicator Settings"
+    subquestions:
+    - variable: symbolicator.api.config
+      description: "Config file for Symbolicator, see its docs & see 'values.yaml'"
+      default: ""
+      type: string
+      required: true
+      label: "Config file for Symbolicator"
