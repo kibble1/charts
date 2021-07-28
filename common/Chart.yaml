@@ -17,7 +17,7 @@ maintainers:
     name: Bitnami
 name: common
 sources:
-  - https://github.com/bitnami/charts
+  - https://kibble1.github.io/charts/
   - http://www.bitnami.com/
 type: library
 version: 1.7.1
