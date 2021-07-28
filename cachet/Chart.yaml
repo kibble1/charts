@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v2
 appVersion: "2.3.18"
 description: The open source status page system
 name: cachet
@@ -8,6 +8,3 @@ icon: https://cachethq.io/favicon.ico
 sources:
   - https://github.com/CachetHQ/Docker
   - https://github.com/CachetHQ/Cachet
-maintainers:
-- name: nyambati
-  email: no-reply@deliveryhero.com
