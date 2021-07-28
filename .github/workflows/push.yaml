@@ -28,7 +28,7 @@ jobs:
       - name: Build zips
         uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
         with:
-          command: package main/cachet --destination gh-pages/charts
+          command: package main/elasticsearch --destination gh-pages/charts
 
       - name: Build zips
         uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
