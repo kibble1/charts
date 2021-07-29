@@ -3,7 +3,7 @@ entries:
   clickhouse:
   - apiVersion: v1
     appVersion: 21.6.5.37-stable
-    created: "2021-07-28T23:11:33.407531386Z"
+    created: "2021-07-29T15:36:47.485008758Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
@@ -22,11 +22,11 @@ entries:
     version: 3.0.1
   - apiVersion: v1
     appVersion: "19.14"
-    created: "2021-07-28T23:11:33.40579582Z"
+    created: "2021-07-29T15:36:47.48362554Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
-    digest: 792cf7fe0601abd2f5755ec94a731499d6a4fd19adf0794cbcda95af8660d6dc
+    digest: ee7499fbe6c4b7b28e58b025f3da495e47f3afde520cb7ef5d74c6936ff3c4b0
     home: https://clickhouse.yandex/
     icon: https://clickhouse.yandex/images/logo.png
     keywords:
@@ -35,7 +35,7 @@ entries:
     - database
     name: clickhouse
     sources:
-    - https://github.com/sentry-kubernetes/charts
+    - https://kibble1.github.io/charts/
     urls:
     - https://kibble1.github.io/charts/clickhouse-3.0.0.tgz
     version: 3.0.0
@@ -44,10 +44,10 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 1.7.1
-    created: "2021-07-28T23:11:33.408336317Z"
+    created: "2021-07-29T15:36:47.486023971Z"
     description: A Library Helm Chart for grouping common logic between bitnami charts.
       This chart is not deployable by itself.
-    digest: b864b48baa3fc746491844923e75683fc37e9b4d8e85c13e57bdaaaa4cc3f206
+    digest: d2e192df9a295406fddd48904b99a5d2341f287f1e2f10164359fcfbe88d539d
     home: https://github.com/bitnami/charts/tree/master/bitnami/common
     icon: https://bitnami.com/downloads/logos/bitnami-mark.png
     keywords:
@@ -61,8 +61,7 @@ entries:
       name: Bitnami
     name: common
     sources:
-    - https://github.com/bitnami/charts
-    - http://www.bitnami.com/
+    - https://kibble1.github.io/charts/
     type: library
     urls:
     - https://kibble1.github.io/charts/common-1.7.1.tgz
@@ -70,7 +69,7 @@ entries:
   guacamole:
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-07-28T23:11:33.416731437Z"
+    created: "2021-07-29T15:36:47.493272666Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: 297b9e052fd5e586184f209715a03cf4cd2a80c091704c3d6bd1f490c3b8d283
@@ -83,7 +82,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.3.0
-    created: "2021-07-28T23:11:33.413996233Z"
+    created: "2021-07-29T15:36:47.491593644Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: 356f6e4d7471fdda0bbd7b7bce05a67af92df69209ae21b3b007d831ef271073
@@ -96,7 +95,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-07-28T23:11:33.413640419Z"
+    created: "2021-07-29T15:36:47.491225839Z"
     dependencies:
     - condition: mysql.enabled
       name: mysql
@@ -113,7 +112,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-07-28T23:11:33.409178749Z"
+    created: "2021-07-29T15:36:47.486932583Z"
     description: A remote desktop frontend
     digest: c6a331779dd5d963d62ef09041966fd72c331087ac910bcc3f2e4e79f9e2843c
     name: guacamole
@@ -123,7 +122,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 1.3.0
-    created: "2021-07-28T23:11:33.408574126Z"
+    created: "2021-07-29T15:36:47.486392376Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: e185f6168736a06986753c91d480e849397dbec3b9de7524d7d52f506fb29e10
@@ -136,8 +135,45 @@ entries:
     version: 0.2.1
   sentry:
   - apiVersion: v2
+    appVersion: 21.7.0
+    created: "2021-07-29T15:36:47.586674692Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://kibble1.github.io/charts/
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.3
+    description: A Helm chart for Kubernetes
+    digest: 6cbc71ae4c0eff1c6537834c12ee3321f97443aefc52a4320a4e0b70ebf9dc1c
+    icon: https://www.sentry.dev/_assets2/favicon.ico
+    name: sentry
+    type: application
+    urls:
+    - https://kibble1.github.io/charts/sentry-11.5.0.tgz
+    version: 11.5.0
+  - apiVersion: v2
     appVersion: 21.6.1
-    created: "2021-07-28T23:11:33.493896079Z"
+    created: "2021-07-29T15:36:47.562949881Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -174,7 +210,7 @@ entries:
     version: 11.4.0
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-07-28T23:11:33.468269302Z"
+    created: "2021-07-29T15:36:47.539609874Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -211,7 +247,7 @@ entries:
     version: 11.3.3
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-07-28T23:11:33.442137806Z"
+    created: "2021-07-29T15:36:47.517559085Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -248,7 +284,7 @@ entries:
   sentry-kubernetes:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-07-28T23:11:33.494299795Z"
+    created: "2021-07-29T15:36:47.587117198Z"
     description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
     digest: 233c575ab9e3eb3f63ee347cf32d3719b22e6546952a160cf253b32f895b5b83
     home: https://github.com/getsentry/sentry-kubernetes
@@ -264,4 +300,4 @@ entries:
     urls:
     - https://kibble1.github.io/charts/sentry-kubernetes-0.3.1.tgz
     version: 0.3.1
-generated: "2021-07-28T23:11:33.404116356Z"
+generated: "2021-07-29T15:36:47.482063519Z"
