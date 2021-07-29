@@ -23,6 +23,5 @@ maintainers:
     name: Bitnami
 name: elasticsearch
 sources:
-  - https://github.com/bitnami/bitnami-docker-elasticsearch
-  - https://www.elastic.co/products/elasticsearch
+  - https://kibble1.github.io/charts/
 version: 15.10.0

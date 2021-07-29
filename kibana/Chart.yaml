@@ -21,6 +21,5 @@ maintainers:
     name: Bitnami
 name: kibana
 sources:
-  - https://github.com/bitnami/bitnami-docker-kibana
-  - https://www.elastic.co/products/kibana
+  - https://kibble1.github.io/charts/
 version: 8.1.12

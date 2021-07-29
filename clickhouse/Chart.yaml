@@ -1,4 +1,4 @@
-appVersion: "21.6.5.37-stable"
+appVersion: "19.14"
 description: ClickHouse is an open source column-oriented database management system
   capable of real time generation of analytical data reports using SQL queries
 home: https://clickhouse.yandex/
@@ -10,4 +10,4 @@ keywords:
 name: clickhouse
 sources:
 - https://kibble1.github.io/charts/
-version: 3.0.1
+version: 3.0.0
