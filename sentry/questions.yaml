@@ -237,11 +237,11 @@ questions:
       required: false
       label: "Additional Service Account annotations."
   - variable: system.secretKey
-    description: "secret key for the session cookie (documentation)"
+    description: "For your security, the system.secret-key is generated for you on the first installation. Another one will be regenerated on each upgrade invalidating all the current sessions unless it's been provided. The value is stored in the sentry-sentry configmap (https://develop.sentry.dev/config/#general)"
     default: ""
-    type: secret
+    type: password
     required: true
-    label: "secret key for the session cookie (documentation)"
+    label: "secret key for the session cookie"
   - variable: sentry.features.vstsLimitedScopes
     description: "Disables the azdo-integrations with limited scopes that is the cause of so much pain"
     default: true
@@ -252,13 +252,13 @@ questions:
     description: "Allows mounting a custom CA secret"
     default: ""
     type: secret
-    required: true
+    required: false
     label: "Allows mounting a custom CA secret"
   - variable: sentry.web.customCA.item
     description: "Key of CA cert object within the secret"
     default: "ca.crt"
     type: string
-    required: true
+    required: false
     label: "Key of CA cert object within the secret"
   - variable: symbolicator.api.enabled
     description: "Enable Symbolicator"
