@@ -3,7 +3,7 @@ entries:
   clickhouse:
   - apiVersion: v1
     appVersion: 21.6.5.37-stable
-    created: "2021-08-02T19:30:00.152454376Z"
+    created: "2021-08-02T19:38:21.871235432Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
@@ -22,7 +22,7 @@ entries:
     version: 3.0.1
   - apiVersion: v1
     appVersion: "19.14"
-    created: "2021-08-02T19:30:00.150638863Z"
+    created: "2021-08-02T19:38:21.869561444Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
@@ -44,7 +44,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 1.7.1
-    created: "2021-08-02T19:30:00.153608084Z"
+    created: "2021-08-02T19:38:21.872295324Z"
     description: A Library Helm Chart for grouping common logic between bitnami charts.
       This chart is not deployable by itself.
     digest: d2e192df9a295406fddd48904b99a5d2341f287f1e2f10164359fcfbe88d539d
@@ -69,7 +69,7 @@ entries:
   guacamole:
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-08-02T19:30:00.162314444Z"
+    created: "2021-08-02T19:38:21.880594461Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: 297b9e052fd5e586184f209715a03cf4cd2a80c091704c3d6bd1f490c3b8d283
@@ -82,7 +82,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.3.0
-    created: "2021-08-02T19:30:00.160458832Z"
+    created: "2021-08-02T19:38:21.878663176Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: 356f6e4d7471fdda0bbd7b7bce05a67af92df69209ae21b3b007d831ef271073
@@ -95,7 +95,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-08-02T19:30:00.160094129Z"
+    created: "2021-08-02T19:38:21.878288179Z"
     dependencies:
     - condition: mysql.enabled
       name: mysql
@@ -112,7 +112,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-08-02T19:30:00.154690292Z"
+    created: "2021-08-02T19:38:21.873383516Z"
     description: A remote desktop frontend
     digest: c6a331779dd5d963d62ef09041966fd72c331087ac910bcc3f2e4e79f9e2843c
     name: guacamole
@@ -122,7 +122,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 1.3.0
-    created: "2021-08-02T19:30:00.153944586Z"
+    created: "2021-08-02T19:38:21.872599321Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: e185f6168736a06986753c91d480e849397dbec3b9de7524d7d52f506fb29e10
@@ -136,7 +136,7 @@ entries:
   sentry:
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-02T19:30:00.374648318Z"
+    created: "2021-08-02T19:38:22.084207227Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -164,7 +164,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 9.3.3
     description: A Helm chart for Kubernetes
-    digest: e0b49d8237f8545b2d0209071e67841130a76f329bdd8d5d6b7b48e174d58225
+    digest: d7a4d3fd7b2b48cf20dc385da2c645f6f3ee5bdce29f4209ae710fe0efd938e1
     icon: https://www.sentry.dev/_assets2/favicon.ico
     name: sentry
     type: application
@@ -173,7 +173,7 @@ entries:
     version: 11.5.3
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-02T19:30:00.341983691Z"
+    created: "2021-08-02T19:38:22.047758302Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -210,7 +210,7 @@ entries:
     version: 11.5.2
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-02T19:30:00.311629381Z"
+    created: "2021-08-02T19:38:22.016622336Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -247,7 +247,7 @@ entries:
     version: 11.5.1
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-02T19:30:00.28124407Z"
+    created: "2021-08-02T19:38:21.988528148Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -284,7 +284,7 @@ entries:
     version: 11.5.0
   - apiVersion: v2
     appVersion: 21.6.1
-    created: "2021-08-02T19:30:00.250445056Z"
+    created: "2021-08-02T19:38:21.962676543Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -321,7 +321,7 @@ entries:
     version: 11.4.0
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-08-02T19:30:00.222836564Z"
+    created: "2021-08-02T19:38:21.934536055Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -358,7 +358,7 @@ entries:
     version: 11.3.3
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-08-02T19:30:00.188680827Z"
+    created: "2021-08-02T19:38:21.906254568Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -395,7 +395,7 @@ entries:
   sentry-kubernetes:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-08-02T19:30:00.375325723Z"
+    created: "2021-08-02T19:38:22.084699123Z"
     description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
     digest: 233c575ab9e3eb3f63ee347cf32d3719b22e6546952a160cf253b32f895b5b83
     home: https://github.com/getsentry/sentry-kubernetes
@@ -411,4 +411,4 @@ entries:
     urls:
     - https://kibble1.github.io/charts/sentry-kubernetes-0.3.1.tgz
     version: 0.3.1
-generated: "2021-08-02T19:30:00.148406048Z"
+generated: "2021-08-02T19:38:21.86743236Z"
