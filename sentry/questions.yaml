@@ -30,7 +30,7 @@ questions:
     description: "Configure Sentry for single or multiple organizations"
     default: true
     type: boolean
-    required: false
+    required: true
     label: "Sentry Single Organization"
   - variable: ingress.enabled
     description: "Enabling Ingress"
@@ -52,15 +52,14 @@ questions:
           - "aws-alb"
           - "gke"
           - "traefik"
-        show_subquestion_if: "aws-alb"
+        show_if: "aws-alb"
         group: "AWS ALB Settings"
-        subquestions:
-          - variable: ingress.alb.httpRedirect
-            description: "AWS ALB Ingress controller, switch to true if you want activate the http to https redirection."
-            default: false
-            type: boolean
-            required: false
-            label: "AWS ALB Ingress controller"
+      - variable: ingress.alb.httpRedirect
+        description: "AWS ALB Ingress controller, switch to true if you want activate the http to https redirection."
+        default: false
+        type: boolean
+        required: false
+        label: "AWS ALB Ingress controller http to https redirection"
   - variable: nginx.enabled
     description: "Enabling NGINX"
     default: true
@@ -240,13 +239,13 @@ questions:
     description: "For your security, the system.secret-key is generated for you on the first installation. Another one will be regenerated on each upgrade invalidating all the current sessions unless it's been provided. The value is stored in the sentry-sentry configmap (https://develop.sentry.dev/config/#general)"
     default: ""
     type: password
-    required: true
+    required: false
     label: "secret key for the session cookie"
   - variable: sentry.features.vstsLimitedScopes
     description: "Disables the azdo-integrations with limited scopes that is the cause of so much pain"
     default: true
     type: boolean
-    required: true
+    required: false
     label: "Disables the azdo-integrations with limited scopes that is the cause of so much pain"
   - variable: sentry.web.customCA.secretName
     description: "Allows mounting a custom CA secret"
