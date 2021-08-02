@@ -52,8 +52,6 @@ questions:
           - "aws-alb"
           - "gke"
           - "traefik"
-        show_if: "aws-alb"
-        group: "AWS ALB Settings"
       - variable: ingress.alb.httpRedirect
         description: "AWS ALB Ingress controller, switch to true if you want activate the http to https redirection."
         default: false
@@ -99,30 +97,30 @@ questions:
         - Never
     - variable: metrics.nodeSelector
       description: "Node labels for metrics pod assignment"
-      default: ""
+      default: nil
       type: string
       required: true
       label: "Node labels for metrics pod assignment"
     - variable: metrics.tolerations
       description: "Toleration labels for metrics pod assignment"
-      default: ""
+      default: nil
       type: multiline
       label: "Toleration labels for metrics pod assignment"
     - variable: metrics.affinity
       description: "Affinity settings for metrics"
-      default: ""
+      default: nil
       type: multiline
       required: true
       label: "Affinity settings for metrics"
     - variable: metrics.resources
       description: "Metrics resource requests/limit"
-      default: ""
+      default: nil
       type: string
       required: true
       label: "Metrics resource requests/limit"
     - variable: metrics.service.annotations
       description: "annotations for Prometheus metrics service"
-      default: ""
+      default: nil
       type: multiline
       required: true
       label: "annotations for Prometheus metrics service"
@@ -140,25 +138,25 @@ questions:
       label: "(Deprecated) To omit the clusterIP from the metrics service"
     - variable: metrics.service.externalIPs
       description: "Prometheus metrics service external IP addresses"
-      default: ""
+      default: nil
       type: multiline
       required: true
       label: "Prometheus metrics service external IP addresses"
     - variable: metrics.service.additionalLabels
       description: "labels for metrics service"
-      default: ""
+      default: nil
       type: multiline
       required: false
       label: "labels for metrics service"
     - variable: metrics.service.loadBalancerIP
       description: "IP address to assign to load balancer (if supported)"
-      default: ""
+      default: nil
       type: multiline
       required: false
       label: "IP address to assign to load balancer (if supported)"
     - variable: metrics.service.loadBalancerSourceRanges
       description: "list of IP CIDRs allowed access to load balancer (if supported)"
-      default: ""
+      default: nil
       type: multiline
       required: false
       label: "list of IP CIDRs allowed access to load balancer (if supported)"
@@ -186,7 +184,7 @@ questions:
       label: "create ServiceMonitor for Prometheus operator"
     - variable: metrics.serviceMonitor.additionalLabels
       description: "Additional labels that can be used so ServiceMonitor will be discovered by Prometheus"
-      default: ""
+      default: nil
       type: multiline
       required: true
       label: "Additional labels that can be used so ServiceMonitor will be discovered by Prometheus"
@@ -198,7 +196,7 @@ questions:
       label: "honorLabels chooses the metric's labels on collisions with target labels."
     - variable: metrics.serviceMonitor.namespace
       description: "namespace where servicemonitor resource should be created	the same namespace as sentry"
-      default: ""
+      default: nil
       type: string
       required: true
       label: "Service Monitor Namespace"
@@ -231,13 +229,13 @@ questions:
       label: "Automount API credentials for a Service Account."
     - variable: serviceAccount.annotations
       description: "Additional Service Account annotations."
-      default: ""
+      default: nil
       type: multiline
       required: false
       label: "Additional Service Account annotations."
   - variable: system.secretKey
     description: "For your security, the system.secret-key is generated for you on the first installation. Another one will be regenerated on each upgrade invalidating all the current sessions unless it's been provided. The value is stored in the sentry-sentry configmap (https://develop.sentry.dev/config/#general)"
-    default: ""
+    default: nil
     type: password
     required: false
     label: "secret key for the session cookie"
@@ -249,7 +247,7 @@ questions:
     label: "Disables the azdo-integrations with limited scopes that is the cause of so much pain"
   - variable: sentry.web.customCA.secretName
     description: "Allows mounting a custom CA secret"
-    default: ""
+    default: nil
     type: secret
     required: false
     label: "Allows mounting a custom CA secret"
@@ -270,7 +268,7 @@ questions:
     subquestions:
     - variable: symbolicator.api.config
       description: "Config file for Symbolicator, see its docs & see 'values.yaml'"
-      default: ""
+      default: nil
       type: string
       required: true
       label: "Config file for Symbolicator"
