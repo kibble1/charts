@@ -33,6 +33,16 @@ jobs:
       - name: Build zips
         uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
         with:
+          command: package main/postgres-controller --destination gh-pages/charts
+
+      - name: Build zips
+        uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
+        with:
+          command: package main/postgressql --destination gh-pages/charts
+
+      - name: Build zips
+        uses: yeouchien/helm3-action@f3a7c239c5c60777210c8e631839edf5dd3fa29c
+        with:
           command: package main/common --destination gh-pages/charts
 
       # - name: Build zips
