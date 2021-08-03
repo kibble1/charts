@@ -4,24 +4,52 @@
 
 replicaCount: 1
 
-image:
-  repository: cachethq/docker
-  tag: "2.3.15"
-  pullPolicy: Always
+cachet:
+  image:
+    repository: cachethq/docker
+    tag: "{{ .Chart.AppVersion }}"
+    pullPolicy: Always
+    restartPolicy: Always
+    service:
+      type: ClusterIP
+      port: 80
+    HostName: ""
+    nameOverride: ""
+    fullnameOverride: ""
+    nodeSelector: {}
+    tolerations: []
+    affinity: {}
+
+postgresql:
+  image:
+    registry: docker.io
+    repository: postgres
+    tag: "12-alpine"
+    pullPolicy: IfNotPresent
+    restartPolicy: Always
+  nodeSelector: {}
+  livenessProbe:
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    timeoutSeconds: 5
+    successThreshold: 1
+    failureThreshold: 3
+  readinessProbe:
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 1
+    successThreshold: 1
+    failureThreshold: 3
+  service:
+    type: ClusterIP
+    port: 5432
 
 imagePullSecrets: []
 
-nameOverride: ""
-fullnameOverride: ""
-
-service:
-  type: ClusterIP
-  port: 80
-
 ingress:
-  enabled: false
+  enabled: true
   annotations: {}
-  host: chart-example.local
+  host: chart-example.localhost
   tls: []
   path: /
   #  - secretName: chart-example-tls
@@ -38,7 +66,7 @@ resources:
 
 # creates cachet database via posgres-controller
 database:
-  create: false
+  create: true
   host: cachet-db.example.com
   port: 5432
   name: cachet
