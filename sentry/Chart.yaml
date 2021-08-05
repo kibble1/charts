@@ -3,7 +3,7 @@ name: sentry
 description: A Helm chart for Kubernetes
 icon: https://www.sentry.dev/_assets2/favicon.ico
 type: application
-version: 11.5.5
+version: 11.5.6
 appVersion: 21.7.0
 dependencies:
   - name: redis
