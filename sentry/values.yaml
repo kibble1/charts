@@ -15,22 +15,22 @@ images:
   sentry:
     # repository: getsentry/sentry
     # tag: Chart.AppVersion
-    # pullPolicy: IfNotPresent
+    # pullPolicy: Always
     imagePullSecrets: []
   snuba:
     # repository: getsentry/snuba
     # tag: Chart.AppVersion
-    # pullPolicy: IfNotPresent
+    # pullPolicy: Always
     imagePullSecrets: []
   relay:
     # repository: getsentry/relay
     # tag: Chart.AppVersion
-    # pullPolicy: IfNotPresent
+    # pullPolicy: Always
     imagePullSecrets: []
   symbolicator:
     # repository: getsentry/symbolicator
     tag: 0.3.3
-    # pullPolicy: IfNotPresent
+    # pullPolicy: Always
     imagePullSecrets: []
 
 serviceAccount:
@@ -345,7 +345,7 @@ hooks:
     image:
       # repository: subfuzion/netcat
       # tag: latest
-      # pullPolicy: IfNotPresent
+      # pullPolicy: Always
       imagePullSecrets: []
     env: []
     podAnnotations: {}
@@ -834,7 +834,7 @@ metrics:
   image:
     repository: prom/statsd-exporter
     tag: v0.17.0
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
 
   # Enable this if you're using https://github.com/coreos/prometheus-operator
   serviceMonitor:

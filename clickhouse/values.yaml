@@ -44,6 +44,8 @@ clickhouse:
   ##
   updateStrategy: "RollingUpdate"
 
+  securityContext: {}
+
   ## Partition update strategy
   ## https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#partitions
   ##
@@ -118,7 +120,7 @@ clickhouse:
   image: "yandex/clickhouse-server"
   tag: latest
   imageVersion: "21.7.5"
-  imagePullPolicy: "IfNotPresent"
+  imagePullPolicy: "Always"
 
   ## The resource limits and requests used by clickhouse
   resources: {}
@@ -126,7 +128,7 @@ clickhouse:
   init:
     image: "busybox"
     imageVersion: "1.31.0"
-    imagePullPolicy: "IfNotPresent"
+    imagePullPolicy: "Always"
   #imagePullSecrets:
   ## Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated.
   ## More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
@@ -392,7 +394,7 @@ tabix:
   ## Image pull policy. One of Always, Never, IfNotPresent.
   ## Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated.
   ## More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
-  imagePullPolicy: "IfNotPresent"
+  imagePullPolicy: "Always"
   ## Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated.
   ## More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
   livenessProbe:
