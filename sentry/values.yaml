@@ -581,6 +581,7 @@ config:
 
 clickhouse:
   enabled: true
+  securityContext: {}
   clickhouse:
     imageVersion: "21.7.5"
     configmap:
