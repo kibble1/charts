@@ -68,7 +68,7 @@ relay:
   volumes: [ ]
 
 sentry:
-  singleOrganization: true
+  singleOrganization: false
   web:
     # if using filestore backend filesystem with RWO access, set strategyType to Recreate
     strategyType: RollingUpdate
@@ -486,7 +486,7 @@ slack: {}
 #   Reference -> https://develop.sentry.dev/integrations/slack/
 
 nginx:
-  enabled: true
+  enabled: false
   containerPort: 8080
   existingServerBlockConfigmap: '{{ template "sentry.fullname" . }}'
   resources: {}
@@ -500,7 +500,7 @@ nginx:
   #   name: nginx
 
 ingress:
-  enabled: false
+  enabled: true
   # If you are using traefik ingress controller, switch this to 'traefik'
   # if you are using AWS ALB Ingress controller, switch this to 'aws-alb'
   # if you are using GKE Ingress controller, switch this to 'gke'
