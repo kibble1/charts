@@ -3,7 +3,7 @@ entries:
   cachet:
   - apiVersion: v1
     appVersion: 2.3.18
-    created: "2021-08-05T16:30:55.248381623Z"
+    created: "2021-08-05T17:07:47.820447653Z"
     description: The open source status page system
     digest: 8e6483c97432861ba59244e691c42ed54a454297928af9bea3c0d7786ca9225c
     home: https://cachethq.io/
@@ -19,7 +19,7 @@ entries:
     version: 1.2.8
   - apiVersion: v1
     appVersion: 2.3.13
-    created: "2021-08-05T16:30:55.24656951Z"
+    created: "2021-08-05T17:07:47.819776745Z"
     description: The Open Source Status Page
     digest: c0d6a2ea25472ff94fe47563b3006ce7d06cb3c2452495ad8eb07ab894737ac8
     keywords:
@@ -31,11 +31,11 @@ entries:
   clickhouse:
   - apiVersion: v1
     appVersion: 21.7.5
-    created: "2021-08-05T16:30:55.251923549Z"
+    created: "2021-08-05T17:07:47.822945982Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
-    digest: e8584f74a84e6d8e6ffbb4ef3db29ea24997eec1ee87d72e1bfb993abc7b8603
+    digest: 1e86bd5079f499e917eed38d48cf6e0b54bc30667fae32cf2f9ad5d10c19190c
     home: https://clickhouse.yandex/
     icon: https://clickhouse.yandex/images/logo.png
     keywords:
@@ -50,7 +50,7 @@ entries:
     version: 3.0.1
   - apiVersion: v1
     appVersion: "19.14"
-    created: "2021-08-05T16:30:55.250219337Z"
+    created: "2021-08-05T17:07:47.821741068Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
@@ -72,7 +72,7 @@ entries:
       category: Infrastructure
     apiVersion: v2
     appVersion: 1.7.1
-    created: "2021-08-05T16:30:55.253078657Z"
+    created: "2021-08-05T17:07:47.823593189Z"
     description: A Library Helm Chart for grouping common logic between bitnami charts.
       This chart is not deployable by itself.
     digest: d2e192df9a295406fddd48904b99a5d2341f287f1e2f10164359fcfbe88d539d
@@ -97,7 +97,7 @@ entries:
   guacamole:
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-08-05T16:30:55.26315963Z"
+    created: "2021-08-05T17:07:47.829841361Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: 297b9e052fd5e586184f209715a03cf4cd2a80c091704c3d6bd1f490c3b8d283
@@ -110,7 +110,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.3.0
-    created: "2021-08-05T16:30:55.260801913Z"
+    created: "2021-08-05T17:07:47.828566447Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: 356f6e4d7471fdda0bbd7b7bce05a67af92df69209ae21b3b007d831ef271073
@@ -123,7 +123,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-08-05T16:30:55.26038581Z"
+    created: "2021-08-05T17:07:47.828334944Z"
     dependencies:
     - condition: mysql.enabled
       name: mysql
@@ -140,7 +140,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-08-05T16:30:55.254525568Z"
+    created: "2021-08-05T17:07:47.824397199Z"
     description: A remote desktop frontend
     digest: c6a331779dd5d963d62ef09041966fd72c331087ac910bcc3f2e4e79f9e2843c
     name: guacamole
@@ -150,7 +150,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: 1.3.0
-    created: "2021-08-05T16:30:55.25352066Z"
+    created: "2021-08-05T17:07:47.823847692Z"
     description: Apache Guacamole is a clientless remote desktop gateway. It supports
       standard protocols like VNC, RDP, and SSH.
     digest: e185f6168736a06986753c91d480e849397dbec3b9de7524d7d52f506fb29e10
@@ -164,7 +164,7 @@ entries:
   postgres-controller:
   - apiVersion: v1
     appVersion: "0.5"
-    created: "2021-08-05T16:30:55.263711134Z"
+    created: "2021-08-05T17:07:47.830333267Z"
     description: A controller for managing PostgreSQL databases, roles and more
     digest: b035039244ef0d55a9aaad0d8658df4585404907a5b51587c6a09ab2cbfb00ca
     home: https://github.com/max-rocket-internet/postgres-controller
@@ -180,7 +180,7 @@ entries:
   sentry:
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-05T16:30:55.537309213Z"
+    created: "2021-08-05T17:07:48.045935859Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -208,7 +208,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 9.3.3
     description: A Helm chart for Kubernetes
-    digest: 9823352c3f9efadbd35b39ca29c36d2ef3a46ab4a82b80e9ecaa2ce327c48a3e
+    digest: 47e100f74f78654093fdeb4688ecadeaf50318824c6aba01be75c5f5a05383cd
     icon: https://www.sentry.dev/_assets2/favicon.ico
     name: sentry
     type: application
@@ -217,7 +217,7 @@ entries:
     version: 11.5.6
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-05T16:30:55.510782921Z"
+    created: "2021-08-05T17:07:48.02527742Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -254,7 +254,7 @@ entries:
     version: 11.5.5
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-05T16:30:55.483324622Z"
+    created: "2021-08-05T17:07:48.00367807Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -291,7 +291,7 @@ entries:
     version: 11.5.4
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-05T16:30:55.45537892Z"
+    created: "2021-08-05T17:07:47.982456125Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -328,7 +328,7 @@ entries:
     version: 11.5.3
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-05T16:30:55.426200509Z"
+    created: "2021-08-05T17:07:47.962189591Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -365,7 +365,7 @@ entries:
     version: 11.5.2
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-05T16:30:55.397561002Z"
+    created: "2021-08-05T17:07:47.940953445Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -402,7 +402,7 @@ entries:
     version: 11.5.1
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-05T16:30:55.370706908Z"
+    created: "2021-08-05T17:07:47.918106781Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -439,7 +439,7 @@ entries:
     version: 11.5.0
   - apiVersion: v2
     appVersion: 21.6.1
-    created: "2021-08-05T16:30:55.342528804Z"
+    created: "2021-08-05T17:07:47.89639093Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -476,7 +476,7 @@ entries:
     version: 11.4.0
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-08-05T16:30:55.315877411Z"
+    created: "2021-08-05T17:07:47.876170797Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -513,7 +513,7 @@ entries:
     version: 11.3.3
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-08-05T16:30:55.289823123Z"
+    created: "2021-08-05T17:07:47.851796915Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -550,7 +550,7 @@ entries:
   sentry-kubernetes:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-08-05T16:30:55.537798116Z"
+    created: "2021-08-05T17:07:48.046289963Z"
     description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
     digest: 233c575ab9e3eb3f63ee347cf32d3719b22e6546952a160cf253b32f895b5b83
     home: https://github.com/getsentry/sentry-kubernetes
@@ -566,4 +566,4 @@ entries:
     urls:
     - https://kibble1.github.io/charts/sentry-kubernetes-0.3.1.tgz
     version: 0.3.1
-generated: "2021-08-05T16:30:55.245653904Z"
+generated: "2021-08-05T17:07:47.819433941Z"
