@@ -14,6 +14,8 @@
 image:
   registry: cache-registry.caas.intel.com/cache
   repository: bitnami/kafka
+  imagePullSecrets:
+  - name: cache-registry
   tag: 2.6.0-debian-10-r78
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -520,6 +522,8 @@ externalAccess:
     image:
       registry: cache-registry.caas.intel.com/cache
       repository: bitnami/kubectl
+      imagePullSecrets:
+      - name: cache-registry
       tag: 1.17.13-debian-10-r21
       ## Specify a imagePullPolicy
       ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -626,6 +630,8 @@ volumePermissions:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/minideb
+    imagePullSecrets:
+    - name: cache-registry
     tag: buster
     ## Specify a imagePullPolicy
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -690,6 +696,8 @@ metrics:
     image:
       registry: cache-registry.caas.intel.com/cache
       repository: bitnami/kafka-exporter
+      imagePullSecrets:
+      - name: cache-registry
       tag: 1.2.0-debian-10-r277
       ## Specify a imagePullPolicy
       ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -778,6 +786,8 @@ metrics:
     image:
       registry: cache-registry.caas.intel.com/cache
       repository: bitnami/jmx-exporter
+      imagePullSecrets:
+      - name: cache-registry
       tag: 0.14.0-debian-10-r64
       ## Specify a imagePullPolicy
       ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'

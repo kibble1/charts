@@ -16,22 +16,30 @@ images:
     # repository: getsentry/sentry
     # tag: Chart.AppVersion
     # pullPolicy: IfNotPresent
-    imagePullSecrets: []
+    registry: cache-registry.caas.intel.com/cache
+    imagePullSecrets:
+    - name: cache-registry
   snuba:
     # repository: getsentry/snuba
     # tag: Chart.AppVersion
     # pullPolicy: IfNotPresent
-    imagePullSecrets: []
+    registry: cache-registry.caas.intel.com/cache
+    imagePullSecrets:
+    - name: cache-registry
   relay:
     # repository: getsentry/relay
     # tag: Chart.AppVersion
     # pullPolicy: IfNotPresent
-    imagePullSecrets: []
+    registry: cache-registry.caas.intel.com/cache
+    imagePullSecrets:
+    - name: cache-registry
   symbolicator:
     # repository: getsentry/symbolicator
     tag: 0.3.3
     # pullPolicy: IfNotPresent
-    imagePullSecrets: []
+    registry: cache-registry.caas.intel.com/cache
+    imagePullSecrets:
+    - name: cache-registry
 
 serviceAccount:
   # serviceAccount.annotations -- Additional Service Account annotations.
@@ -346,7 +354,9 @@ hooks:
       # repository: subfuzion/netcat
       # tag: latest
       # pullPolicy: IfNotPresent
-      imagePullSecrets: []
+      registry: cache-registry.caas.intel.com/cache
+      imagePullSecrets:
+      - name: cache-registry
     env: []
     podAnnotations: {}
     resources:
@@ -834,6 +844,8 @@ metrics:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: prom/statsd-exporter
+    imagePullSecrets:
+    - name: cache-registry
     tag: v0.17.0
     pullPolicy: IfNotPresent
 

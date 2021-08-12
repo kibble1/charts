@@ -14,6 +14,8 @@
 image:
   registry: cache-registry.caas.intel.com/cache
   repository: bitnami/zookeeper
+  imagePullSecrets:
+  - name: cache-registry
   tag: 3.6.2-debian-10-r58
 
   ## Specify a imagePullPolicy
@@ -59,6 +61,8 @@ volumePermissions:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/minideb
+    imagePullSecrets:
+    - name: cache-registry
     tag: buster
     pullPolicy: Always
     ## Optionally specify an array of imagePullSecrets.

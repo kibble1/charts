@@ -15,6 +15,8 @@ global:
 image:
   registry: cache-registry.caas.intel.com/cache
   repository: bitnami/postgresql
+  imagePullSecrets:
+  - name: cache-registry
   tag: 11.10.0-debian-10-r60
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -51,6 +53,8 @@ volumePermissions:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/minideb
+    imagePullSecrets:
+    - name: cache-registry
     tag: buster
     ## Specify a imagePullPolicy
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -754,6 +758,8 @@ metrics:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/postgres-exporter
+    imagePullSecrets:
+    - name: cache-registry
     tag: 0.8.0-debian-10-r328
     pullPolicy: IfNotPresent
     ## Optionally specify an array of imagePullSecrets.

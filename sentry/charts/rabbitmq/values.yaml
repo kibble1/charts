@@ -14,6 +14,8 @@
 image:
   registry: cache-registry.caas.intel.com/cache
   repository: bitnami/rabbitmq
+  imagePullSecrets:
+  - name: cache-registry
   tag: 3.8.11-debian-10-r0
 
   ## set to true if you would like to see extra information on logs
@@ -906,6 +908,8 @@ volumePermissions:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/minideb
+    imagePullSecrets:
+    - name: cache-registry
     tag: buster
     ## Specify a imagePullPolicy
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'

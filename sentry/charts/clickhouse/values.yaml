@@ -81,6 +81,8 @@ clickhouse:
   http_port: "8123"
   registry: cache-registry.caas.intel.com/cache
   image: yandex/clickhouse-server
+  imagePullSecrets:
+  - name: cache-registry
   imagePullPolicy: IfNotPresent
   imageVersion: "19.14"
   ingress:
@@ -105,6 +107,8 @@ clickhouse:
       pullPolicy: IfNotPresent
       registry: cache-registry.caas.intel.com/cache
       repository: f1yegor/clickhouse-exporter
+      imagePullSecrets:
+      - name: cache-registry
       tag: latest
     podAnnotations:
       prometheus.io/port: "9116"
@@ -153,6 +157,8 @@ tabix:
   enabled: false
   registry: cache-registry.caas.intel.com/cache
   image: spoonest/clickhouse-tabix-web-client
+  imagePullSecrets:
+  - name: cache-registry
   imagePullPolicy: IfNotPresent
   imageVersion: stable
   ingress:

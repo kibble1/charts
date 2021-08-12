@@ -13,6 +13,8 @@
 image:
   registry: cache-registry.caas.intel.com/cache
   repository: bitnami/nginx
+  imagePullSecrets:
+  - name: cache-registry
   tag: 1.21.0-debian-10-r21
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -96,6 +98,8 @@ cloneStaticSiteFromGit:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/git
+    imagePullSecrets:
+    - name: cache-registry
     tag: 2.32.0-debian-10-r20
     ## Specify a imagePullPolicy
     ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
@@ -416,6 +420,8 @@ ldapDaemon:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/nginx-ldap-auth-daemon
+    imagePullSecrets:
+    - name: cache-registry
     tag: 0.20200116.0-debian-10-r382
     pullPolicy: IfNotPresent
 
@@ -723,6 +729,8 @@ metrics:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/nginx-exporter
+    imagePullSecrets:
+    - name: cache-registry
     tag: 0.9.0-debian-10-r87
     pullPolicy: IfNotPresent
     ## Optionally specify an array of imagePullSecrets.

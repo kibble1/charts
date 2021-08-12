@@ -14,6 +14,8 @@
 image:
   registry: cache-registry.caas.intel.com/cache
   repository: bitnami/redis
+  imagePullSecrets:
+  - name: cache-registry
   ## Bitnami Redis image tag
   ## ref: https://github.com/bitnami/bitnami-docker-redis#supported-tags-and-respective-dockerfile-links
   ##
@@ -53,6 +55,8 @@ sentinel:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/redis-sentinel
+    imagePullSecrets:
+    - name: cache-registry
     ## Bitnami Redis image tag
     ## ref: https://github.com/bitnami/bitnami-docker-redis-sentinel#supported-tags-and-respective-dockerfile-links
     ##
@@ -456,6 +460,8 @@ metrics:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/redis-exporter
+    imagePullSecrets:
+    - name: cache-registry
     tag: 1.1.1-debian-9-r13
     pullPolicy: IfNotPresent
     ## Optionally specify an array of imagePullSecrets.
@@ -512,6 +518,8 @@ volumePermissions:
   image:
     registry: cache-registry.caas.intel.com/cache
     repository: bitnami/minideb
+    imagePullSecrets:
+    - name: cache-registry
     tag: stretch
     pullPolicy: Always
     ## Optionally specify an array of imagePullSecrets.
@@ -542,6 +550,8 @@ sysctlImage:
   command: []
   registry: cache-registry.caas.intel.com/cache
   repository: bitnami/minideb
+  imagePullSecrets:
+  - name: cache-registry
   tag: stretch
   pullPolicy: Always
   ## Optionally specify an array of imagePullSecrets.
