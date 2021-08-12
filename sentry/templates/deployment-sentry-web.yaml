@@ -99,33 +99,30 @@ spec:
           mountPath: /etc/pki/ca-trust/custom
         {{ end }}
         livenessProbe:
-          failureThreshold: {{ .Values.sentry.web.probeFailureThreshold }}
+          failureThreshold: 5
           httpGet:
-            path: {{ template "sentry.healthCheck.requestPath" }}
+            path: /_health/
             port: {{ template "sentry.port" }}
             scheme: HTTP
           initialDelaySeconds: {{ .Values.sentry.web.probeInitialDelaySeconds }}
-          periodSeconds: {{ .Values.sentry.web.probePeriodSeconds }}
-          successThreshold: {{ .Values.sentry.web.probeSuccessThreshold }}
-          timeoutSeconds: {{ .Values.sentry.web.probeTimeoutSeconds }}
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
         readinessProbe:
-          failureThreshold: {{ .Values.sentry.web.probeFailureThreshold }}
+          failureThreshold: 10
           httpGet:
-            path: {{ template "sentry.healthCheck.requestPath" }}
+            path: /_health/
             port: {{ template "sentry.port" }}
             scheme: HTTP
           initialDelaySeconds: {{ .Values.sentry.web.probeInitialDelaySeconds }}
-          periodSeconds: {{ .Values.sentry.web.probePeriodSeconds }}
-          successThreshold: {{ .Values.sentry.web.probeSuccessThreshold }}
-          timeoutSeconds: {{ .Values.sentry.web.probeTimeoutSeconds }}
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
         resources:
 {{ toYaml .Values.sentry.web.resources | indent 12 }}
 {{- if .Values.sentry.web.sidecars }}
 {{ toYaml .Values.sentry.web.sidecars | indent 6 }}
 {{- end }}
-      {{- if .Values.serviceAccount.enabled }}
-      serviceAccountName: {{ .Values.serviceAccount.name }}-web
-      {{- end }}
       volumes:
       - name: config
         configMap:

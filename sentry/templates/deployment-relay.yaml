@@ -99,33 +99,30 @@ spec:
             subPath: config.yml
             readOnly: true
         livenessProbe:
-          failureThreshold: {{ .Values.relay.probeFailureThreshold }}
+          failureThreshold: 5
           httpGet:
-            path: {{ template "relay.healthCheck.requestPath" }}
+            path: /api/relay/healthcheck/ready/
             port: {{ template "relay.port" }}
             scheme: HTTP
           initialDelaySeconds: {{ .Values.relay.probeInitialDelaySeconds }}
-          periodSeconds: {{ .Values.relay.probePeriodSeconds }}
-          successThreshold: {{ .Values.relay.probeSuccessThreshold }}
-          timeoutSeconds: {{ .Values.relay.probeTimeoutSeconds }}
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
         readinessProbe:
-          failureThreshold: {{ .Values.relay.probeFailureThreshold }}
+          failureThreshold: 10
           httpGet:
-            path: {{ template "relay.healthCheck.requestPath" }}
+            path: /api/relay/healthcheck/ready/
             port: {{ template "relay.port" }}
             scheme: HTTP
           initialDelaySeconds: {{ .Values.relay.probeInitialDelaySeconds }}
-          periodSeconds: {{ .Values.relay.probePeriodSeconds }}
-          successThreshold: {{ .Values.relay.probeSuccessThreshold }}
-          timeoutSeconds: {{ .Values.relay.probeTimeoutSeconds }}
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 2
         resources:
 {{ toYaml .Values.relay.resources | indent 12 }}
 {{- if .Values.relay.sidecars }}
 {{ toYaml .Values.relay.sidecars | indent 6 }}
 {{- end }}
-      {{- if .Values.serviceAccount.enabled }}
-      serviceAccountName: {{ .Values.serviceAccount.name }}-relay
-      {{- end }}
       volumes:
       - name: config
         configMap:
