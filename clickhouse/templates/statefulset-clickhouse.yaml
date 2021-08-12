@@ -115,6 +115,9 @@ spec:
           mountPath: /etc/clickhouse-server/metrica.d
         - name: {{ include "clickhouse.fullname" . }}-users
           mountPath: /etc/clickhouse-server/users.d
+        securityContext:
+          privileged: true
+          runAsUser: 0
       {{- if .Values.clickhouse.metrics.enabled }}
       - name: prom-exporter
         image: "{{ .Values.clickhouse.metrics.image.registry }}/{{ .Values.clickhouse.metrics.image.repository }}:{{ .Values.clickhouse.metrics.image.tag }}"
@@ -165,9 +168,6 @@ spec:
           items:
           - key: users.xml
             path: users.xml
-      {{- end }}
-      {{- if .Values.serviceAccount.enabled }}
-      serviceAccountName: {{ .Values.serviceAccount.name }}
       {{- end }}
 {{- if .Values.clickhouse.persistentVolumeClaim.enabled }}
   volumeClaimTemplates:
