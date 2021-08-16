@@ -1,60 +1,13 @@
 apiVersion: v1
 entries:
-  cachet:
-  - apiVersion: v1
-    appVersion: 2.3.18
-    created: "2021-08-16T16:38:01.565028483Z"
-    description: The open source status page system
-    digest: 8e6483c97432861ba59244e691c42ed54a454297928af9bea3c0d7786ca9225c
-    home: https://cachethq.io/
-    maintainers:
-    - email: no-reply@deliveryhero.com
-      name: nyambati
-    name: cachet
-    sources:
-    - https://github.com/CachetHQ/Docker
-    - https://github.com/CachetHQ/Cachet
-    urls:
-    - https://kibble1.github.io/charts/cachet-1.2.8.tgz
-    version: 1.2.8
-  - apiVersion: v1
-    appVersion: 2.3.13
-    created: "2021-08-16T16:38:01.564286378Z"
-    description: The Open Source Status Page
-    digest: c0d6a2ea25472ff94fe47563b3006ce7d06cb3c2452495ad8eb07ab894737ac8
-    keywords:
-    - cachet
-    name: cachet
-    urls:
-    - https://kibble1.github.io/charts/cachet-0.0.1.tgz
-    version: 0.0.1
   clickhouse:
   - apiVersion: v1
-    appVersion: 21.7.5
-    created: "2021-08-16T16:38:01.568283503Z"
-    description: ClickHouse is an open source column-oriented database management
-      system capable of real time generation of analytical data reports using SQL
-      queries
-    digest: 1e86bd5079f499e917eed38d48cf6e0b54bc30667fae32cf2f9ad5d10c19190c
-    home: https://clickhouse.yandex/
-    icon: https://clickhouse.yandex/images/logo.png
-    keywords:
-    - clickhouse
-    - olap
-    - database
-    name: clickhouse
-    sources:
-    - https://kibble1.github.io/charts/
-    urls:
-    - https://kibble1.github.io/charts/clickhouse-3.0.1.tgz
-    version: 3.0.1
-  - apiVersion: v1
     appVersion: "19.14"
-    created: "2021-08-16T16:38:01.566585193Z"
+    created: "2021-07-31T13:12:31.911583074Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
-    digest: e65bb89d4ff9a6fd4c81b8db9450b204d43f64d80064f9364b0c04bae4cd7408
+    digest: f0b6038007e745087ef1024b28f54ea9581ea9e6f51e7bbf712b720b842fc6c4
     home: https://clickhouse.yandex/
     icon: https://clickhouse.yandex/images/logo.png
     keywords:
@@ -65,530 +18,221 @@ entries:
     sources:
     - https://github.com/sentry-kubernetes/charts
     urls:
-    - https://kibble1.github.io/charts/clickhouse-3.0.0.tgz
+    - https://sentry-kubernetes.github.io/charts/clickhouse-3.0.0.tgz
     version: 3.0.0
-  common:
-  - annotations:
-      category: Infrastructure
-    apiVersion: v2
-    appVersion: 1.7.1
-    created: "2021-08-16T16:38:01.569108809Z"
-    description: A Library Helm Chart for grouping common logic between bitnami charts.
-      This chart is not deployable by itself.
-    digest: d2e192df9a295406fddd48904b99a5d2341f287f1e2f10164359fcfbe88d539d
-    home: https://github.com/bitnami/charts/tree/master/bitnami/common
-    icon: https://bitnami.com/downloads/logos/bitnami-mark.png
-    keywords:
-    - common
-    - helper
-    - template
-    - function
-    - bitnami
-    maintainers:
-    - email: containers@bitnami.com
-      name: Bitnami
-    name: common
-    sources:
-    - https://kibble1.github.io/charts/
-    type: library
-    urls:
-    - https://kibble1.github.io/charts/common-1.7.1.tgz
-    version: 1.7.1
-  guacamole:
-  - apiVersion: v2
-    appVersion: 1.3.0
-    created: "2021-08-16T16:38:01.575913852Z"
-    description: Apache Guacamole is a clientless remote desktop gateway. It supports
-      standard protocols like VNC, RDP, and SSH.
-    digest: 297b9e052fd5e586184f209715a03cf4cd2a80c091704c3d6bd1f490c3b8d283
-    icon: http://guacamole.apache.org/images/guac-logo.png
-    name: guacamole
-    sources:
-    - http://guacamole.apache.org/
-    urls:
-    - https://kibble1.github.io/charts/guacamole-0.5.0.tgz
-    version: 0.5.0
   - apiVersion: v1
-    appVersion: 1.3.0
-    created: "2021-08-16T16:38:01.574348242Z"
-    description: Apache Guacamole is a clientless remote desktop gateway. It supports
-      standard protocols like VNC, RDP, and SSH.
-    digest: 356f6e4d7471fdda0bbd7b7bce05a67af92df69209ae21b3b007d831ef271073
-    icon: http://guacamole.apache.org/images/guac-logo.png
-    name: guacamole
-    sources:
-    - http://guacamole.apache.org/
-    urls:
-    - https://kibble1.github.io/charts/guacamole-0.4.1.tgz
-    version: 0.4.1
-  - apiVersion: v2
-    appVersion: 1.3.0
-    created: "2021-08-16T16:38:01.57408264Z"
-    dependencies:
-    - condition: mysql.enabled
-      name: mysql
-      repository: https://kubernetes-charts.storage.googleapis.com/
-      version: 1.6.2
-    description: A remote desktop frontend
-    digest: 5c0df9ea36ab1d5b14c04d2af8f50401caa21588a3ef34d06b2f43c92e454b94
-    home: https://guacamole.apache.org
-    icon: https://guacamole.apache.org/images/guacamole-logo-64.png
-    name: guacamole
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/guacamole-0.3.1.tgz
-    version: 0.3.1
-  - apiVersion: v2
-    appVersion: 1.3.0
-    created: "2021-08-16T16:38:01.570052415Z"
-    description: A remote desktop frontend
-    digest: c6a331779dd5d963d62ef09041966fd72c331087ac910bcc3f2e4e79f9e2843c
-    name: guacamole
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/guacamole-0.3.0.tgz
-    version: 0.3.0
-  - apiVersion: v1
-    appVersion: 1.3.0
-    created: "2021-08-16T16:38:01.56937881Z"
-    description: Apache Guacamole is a clientless remote desktop gateway. It supports
-      standard protocols like VNC, RDP, and SSH.
-    digest: e185f6168736a06986753c91d480e849397dbec3b9de7524d7d52f506fb29e10
-    icon: http://guacamole.apache.org/images/guac-logo.png
-    name: guacamole
-    sources:
-    - http://guacamole.apache.org/
-    urls:
-    - https://kibble1.github.io/charts/guacamole-0.2.1.tgz
-    version: 0.2.1
-  kafka:
-  - annotations:
-      category: Infrastructure
-    apiVersion: v2
-    appVersion: 2.6.0
-    created: "2021-08-16T16:38:01.580224479Z"
-    dependencies:
-    - condition: zookeeper.enabled
-      name: zookeeper
-      repository: https://kibble1.github.io/charts/
-      version: 6.x.x
-    description: Apache Kafka is a distributed streaming platform.
-    digest: bdfeef21c9bda443e959ea25fbb198917e5ed84ed5e2e93f81c28567fd8de148
-    home: https://github.com/bitnami/charts/tree/master/bitnami/kafka
-    icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-110x117.png
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.908221938Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: 043dac40f90bbec63be43ea9aadf0f3669ae9bcd5d264562e238387ea532075a
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
     keywords:
-    - kafka
-    - zookeeper
-    - streaming
-    - producer
-    - consumer
-    maintainers:
-    - email: containers@bitnami.com
-      name: Bitnami
-    name: kafka
-    sources:
-    - https://kibble1.github.io/charts/
-    urls:
-    - https://kibble1.github.io/charts/kafka-12.0.0.tgz
-    version: 12.0.0
-  nginx:
-  - annotations:
-      category: Infrastructure
-    apiVersion: v2
-    appVersion: 1.21.0
-    created: "2021-08-16T16:38:01.584316605Z"
-    dependencies:
-    - name: common
-      repository: https://kibble1.github.io/charts/
-      tags:
-      - bitnami-common
-      version: 1.x.x
-    description: Chart for the nginx server
-    digest: 278593c58f4b4762a0050745e5fa3ac8795894e92e35491ab3d5c4a9f280a8be
-    home: https://github.com/bitnami/charts/tree/master/bitnami/nginx
-    icon: https://bitnami.com/assets/stacks/nginx/img/nginx-stack-220x234.png
-    keywords:
-    - nginx
-    - http
-    - web
-    - www
-    - reverse proxy
-    maintainers:
-    - email: containers@bitnami.com
-      name: Bitnami
-    name: nginx
-    sources:
-    - https://kibble1.github.io/charts/
-    urls:
-    - https://kibble1.github.io/charts/nginx-9.3.3.tgz
-    version: 9.3.3
-  postgres-controller:
-  - apiVersion: v1
-    appVersion: "0.5"
-    created: "2021-08-16T16:38:01.584815009Z"
-    description: A controller for managing PostgreSQL databases, roles and more
-    digest: b035039244ef0d55a9aaad0d8658df4585404907a5b51587c6a09ab2cbfb00ca
-    home: https://github.com/max-rocket-internet/postgres-controller
-    maintainers:
-    - email: no-reply@deliveryhero.com
-      name: max-rocket-internet
-    name: postgres-controller
-    sources:
-    - https://github.com/max-rocket-internet/postgres-controller
-    urls:
-    - https://kibble1.github.io/charts/postgres-controller-1.2.tgz
-    version: "1.2"
-  postgresql:
-  - annotations:
-      category: Database
-    apiVersion: v2
-    appVersion: 11.10.0
-    created: "2021-08-16T16:38:01.588349031Z"
-    dependencies:
-    - name: common
-      repository: https://kibble1.github.io/charts/
-      version: 1.x.x
-    description: Chart for PostgreSQL, an object-relational database management system
-      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
-    digest: 885dc773b3afb61245beb9a3d53126695d6990b53c2639cdcd3c8666492c8c2d
-    home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
-    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
-    keywords:
-    - postgresql
-    - postgres
+    - clickhouse
+    - olap
     - database
-    - sql
-    - replication
-    - cluster
-    maintainers:
-    - email: containers@bitnami.com
-      name: Bitnami
-    - email: cedric@desaintmartin.fr
-      name: desaintmartin
-    name: postgresql
+    name: clickhouse
     sources:
-    - https://kibble1.github.io/charts/
+    - https://github.com/sentry-kubernetes/charts
     urls:
-    - https://kibble1.github.io/charts/postgresql-10.2.4.tgz
-    version: 10.2.4
-  rabbitmq:
-  - annotations:
-      category: Infrastructure
-    apiVersion: v2
-    appVersion: 3.8.11
-    created: "2021-08-16T16:38:01.590933747Z"
-    dependencies:
-    - name: common
-      repository: https://kibble1.github.io/charts/
-      tags:
-      - bitnami-common
-      version: 1.x.x
-    description: Open source message broker software that implements the Advanced
-      Message Queuing Protocol (AMQP)
-    digest: c69b01da4a6f229df5d8fdde2e56bd6916ae6390b7c8d8d135d4b24e4f1d4175
-    home: https://github.com/bitnami/charts/tree/master/bitnami/rabbitmq
-    icon: https://bitnami.com/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
-    keywords:
-    - rabbitmq
-    - message queue
-    - AMQP
-    maintainers:
-    - email: containers@bitnami.com
-      name: Bitnami
-    name: rabbitmq
-    sources:
-    - https://kibble1.github.io/charts/
-    urls:
-    - https://kibble1.github.io/charts/rabbitmq-8.9.1.tgz
-    version: 8.9.1
-  redis:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-2.0.0.tgz
+    version: 2.0.0
   - apiVersion: v1
-    appVersion: 5.0.5
-    created: "2021-08-16T16:38:01.594030367Z"
-    description: Open source, advanced key-value store. It is often referred to as
-      a data structure server since keys can contain strings, hashes, lists, sets
-      and sorted sets.
-    digest: 4aa152a3ead06f3c4074a197ceff8ba9004fa328290eb1d792e55d9516558d02
-    home: http://redis.io/
-    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.90660152Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: e9b02ecdb3b231768b810652f5819e0d13591b26ae968fb0e153e4394e4ed8c5
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
     keywords:
-    - redis
-    - keyvalue
+    - clickhouse
+    - olap
     - database
-    maintainers:
-    - email: containers@bitnami.com
-      name: Bitnami
-    - email: cedric@desaintmartin.fr
-      name: desaintmartin
-    name: redis
+    name: clickhouse
     sources:
-    - https://kibble1.github.io/charts/
+    - https://github.com/sentry-kubernetes/charts
     urls:
-    - https://kibble1.github.io/charts/redis-9.3.2.tgz
-    version: 9.3.2
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.5.0.tgz
+    version: 1.5.0
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.904968503Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: 1a9045a990dbc0d13edf7bad85dced22dbc3652939d0bd87511515201aceb4ab
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.4.1.tgz
+    version: 1.4.1
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.903373986Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: d4ec41cf3b17198445a4f5925b1d09d405a1f777306d32cb46d47dce0178fd95
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.4.0.tgz
+    version: 1.4.0
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.901711968Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: ed0494ae4a94d80abf57125b5a5a8078854145f91468c46ed0869d67919c1757
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.3.0.tgz
+    version: 1.3.0
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.90005035Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: c052f7bda3a0d0d88c0a66223d2636cf8f68f2cb618e45874e79e4d3ce06d357
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.897471822Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: 8aacc6cee05b7128afb980407e95313329649329b885dee9d42719f6619648f9
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.2.1.tgz
+    version: 1.2.1
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.895637203Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: b32f5931c9cb94e61f5795ef5352627e739a94c9d3dab9aa1f8c34f1ec1c307b
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.894040086Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: 1bb6b450f60917700a21e9d51cb679063e7a0dde0a6d01b33d6b520f7da089a2
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.89261777Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: a7543230aa6ea8b80d192f4a85eadf8f6cb37fef59b1f22dec9c554b45e3dd3e
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    appVersion: "19.14"
+    created: "2021-07-31T13:12:31.891223856Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: fa2422a7c1a3a9e8a8a9b90510d8f1d5ee685a64dbc4bc10aa1e2bda588003b7
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    name: clickhouse
+    sources:
+    - https://github.com/sentry-kubernetes/charts
+    urls:
+    - https://sentry-kubernetes.github.io/charts/clickhouse-1.0.0.tgz
+    version: 1.0.0
   sentry:
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.86816711Z"
-    dependencies:
-    - condition: redis.enabled
-      name: redis
-      repository: https://kibble1.github.io/charts/
-      version: 9.3.2
-    - condition: kafka.enabled
-      name: kafka
-      repository: https://kibble1.github.io/charts/
-      version: 12.0.0
-    - condition: clickhouse.enabled
-      name: clickhouse
-      repository: https://kibble1.github.io/charts/
-      version: 3.0.0
-    - alias: rabbitmq
-      condition: rabbitmq.enabled
-      name: rabbitmq
-      repository: https://kibble1.github.io/charts/
-      version: 8.9.1
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://kibble1.github.io/charts/
-      version: 10.2.4
-    - condition: nginx.enabled
-      name: nginx
-      repository: https://kibble1.github.io/charts/
-      version: 9.3.3
-    description: A Helm chart for Kubernetes
-    digest: 1ea86fcb5fb43dc805b4f7b9c227c31cc90d8b360e235d45a6dd9033877bb24b
-    icon: https://www.sentry.dev/_assets2/favicon.ico
-    name: sentry
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/sentry-11.5.8.tgz
-    version: 11.5.8
-  - apiVersion: v2
-    appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.846485072Z"
-    dependencies:
-    - condition: redis.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.2
-    - condition: kafka.enabled
-      name: kafka
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.0.0
-    - condition: clickhouse.enabled
-      name: clickhouse
-      repository: https://kibble1.github.io/charts/
-      version: 3.0.1
-    - alias: rabbitmq
-      condition: rabbitmq.enabled
-      name: rabbitmq
-      repository: https://charts.bitnami.com/bitnami
-      version: 8.9.1
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 10.2.4
-    - condition: nginx.enabled
-      name: nginx
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.3
-    description: A Helm chart for Kubernetes
-    digest: 2f6bcf3327167f8209978dbdfafd41f33171c4cd2c17ed84b233fd870abff9ef
-    icon: https://www.sentry.dev/_assets2/favicon.ico
-    name: sentry
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/sentry-11.5.7.tgz
-    version: 11.5.7
-  - apiVersion: v2
-    appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.824913035Z"
-    dependencies:
-    - condition: redis.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.2
-    - condition: kafka.enabled
-      name: kafka
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.0.0
-    - condition: clickhouse.enabled
-      name: clickhouse
-      repository: https://kibble1.github.io/charts/
-      version: 3.0.1
-    - alias: rabbitmq
-      condition: rabbitmq.enabled
-      name: rabbitmq
-      repository: https://charts.bitnami.com/bitnami
-      version: 8.9.1
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 10.2.4
-    - condition: nginx.enabled
-      name: nginx
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.3
-    description: A Helm chart for Kubernetes
-    digest: 47e100f74f78654093fdeb4688ecadeaf50318824c6aba01be75c5f5a05383cd
-    icon: https://www.sentry.dev/_assets2/favicon.ico
-    name: sentry
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/sentry-11.5.6.tgz
-    version: 11.5.6
-  - apiVersion: v2
-    appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.802783394Z"
-    dependencies:
-    - condition: redis.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.2
-    - condition: kafka.enabled
-      name: kafka
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.0.0
-    - condition: clickhouse.enabled
-      name: clickhouse
-      repository: https://kibble1.github.io/charts/
-      version: 3.0.1
-    - alias: rabbitmq
-      condition: rabbitmq.enabled
-      name: rabbitmq
-      repository: https://charts.bitnami.com/bitnami
-      version: 8.9.1
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 10.2.4
-    - condition: nginx.enabled
-      name: nginx
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.3
-    description: A Helm chart for Kubernetes
-    digest: ce8c5e3dd143f690953e610a64199990a4c5e60e09204f0fe8ad5a83a421b743
-    icon: https://www.sentry.dev/_assets2/favicon.ico
-    name: sentry
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/sentry-11.5.5.tgz
-    version: 11.5.5
-  - apiVersion: v2
-    appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.780510153Z"
-    dependencies:
-    - condition: redis.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.2
-    - condition: kafka.enabled
-      name: kafka
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.0.0
-    - condition: clickhouse.enabled
-      name: clickhouse
-      repository: https://kibble1.github.io/charts/
-      version: 3.0.0
-    - alias: rabbitmq
-      condition: rabbitmq.enabled
-      name: rabbitmq
-      repository: https://charts.bitnami.com/bitnami
-      version: 8.9.1
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 10.2.4
-    - condition: nginx.enabled
-      name: nginx
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.3
-    description: A Helm chart for Kubernetes
-    digest: 3ac3242fd15a8ad8b0bb0135de17d0ea2931fb046b32bdc93293ed25495742b6
-    icon: https://www.sentry.dev/_assets2/favicon.ico
-    name: sentry
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/sentry-11.5.4.tgz
-    version: 11.5.4
-  - apiVersion: v2
-    appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.757693907Z"
-    dependencies:
-    - condition: redis.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.2
-    - condition: kafka.enabled
-      name: kafka
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.0.0
-    - condition: clickhouse.enabled
-      name: clickhouse
-      repository: https://kibble1.github.io/charts/
-      version: 3.0.0
-    - alias: rabbitmq
-      condition: rabbitmq.enabled
-      name: rabbitmq
-      repository: https://charts.bitnami.com/bitnami
-      version: 8.9.1
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 10.2.4
-    - condition: nginx.enabled
-      name: nginx
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.3
-    description: A Helm chart for Kubernetes
-    digest: d7a4d3fd7b2b48cf20dc385da2c645f6f3ee5bdce29f4209ae710fe0efd938e1
-    icon: https://www.sentry.dev/_assets2/favicon.ico
-    name: sentry
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/sentry-11.5.3.tgz
-    version: 11.5.3
-  - apiVersion: v2
-    appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.735348565Z"
-    dependencies:
-    - condition: redis.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.2
-    - condition: kafka.enabled
-      name: kafka
-      repository: https://charts.bitnami.com/bitnami
-      version: 12.0.0
-    - condition: clickhouse.enabled
-      name: clickhouse
-      repository: https://kibble1.github.io/charts/
-      version: 3.0.0
-    - alias: rabbitmq
-      condition: rabbitmq.enabled
-      name: rabbitmq
-      repository: https://charts.bitnami.com/bitnami
-      version: 8.9.1
-    - condition: postgresql.enabled
-      name: postgresql
-      repository: https://charts.bitnami.com/bitnami
-      version: 10.2.4
-    - condition: nginx.enabled
-      name: nginx
-      repository: https://charts.bitnami.com/bitnami
-      version: 9.3.3
-    description: A Helm chart for Kubernetes
-    digest: 7f7aceabe243ce848bc5989b4564d5eca26f590ad53f28571ee18d0937933f76
-    icon: https://www.sentry.dev/_assets2/favicon.ico
-    name: sentry
-    type: application
-    urls:
-    - https://kibble1.github.io/charts/sentry-11.5.2.tgz
-    version: 11.5.2
-  - apiVersion: v2
-    appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.711837416Z"
+    created: "2021-07-31T13:12:32.60854654Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -616,15 +260,15 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 9.3.3
     description: A Helm chart for Kubernetes
-    digest: f5b94f65828cfe8b5a15d194d6b7e47efa180766da6f7916d3d4135fdafc0358
+    digest: 67a46b75cec3d5591e48a7e345e4f2c5383a812a70492a3362b53c8f92762df5
     name: sentry
     type: application
     urls:
-    - https://kibble1.github.io/charts/sentry-11.5.1.tgz
+    - https://sentry-kubernetes.github.io/charts/sentry-11.5.1.tgz
     version: 11.5.1
   - apiVersion: v2
     appVersion: 21.7.0
-    created: "2021-08-16T16:38:01.688500268Z"
+    created: "2021-07-31T13:12:32.574601276Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -636,7 +280,7 @@ entries:
       version: 12.0.0
     - condition: clickhouse.enabled
       name: clickhouse
-      repository: https://kibble1.github.io/charts/
+      repository: https://sentry-kubernetes.github.io/charts
       version: 3.0.0
     - alias: rabbitmq
       condition: rabbitmq.enabled
@@ -652,53 +296,87 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 9.3.3
     description: A Helm chart for Kubernetes
-    digest: 6cbc71ae4c0eff1c6537834c12ee3321f97443aefc52a4320a4e0b70ebf9dc1c
-    icon: https://www.sentry.dev/_assets2/favicon.ico
+    digest: 12d65720c36825f8c750e92322b475892c058f42fd53b933ac1a8d2a1e6cb1a5
     name: sentry
     type: application
     urls:
-    - https://kibble1.github.io/charts/sentry-11.5.0.tgz
+    - https://sentry-kubernetes.github.io/charts/sentry-11.5.0.tgz
     version: 11.5.0
   - apiVersion: v2
     appVersion: 21.6.1
-    created: "2021-08-16T16:38:01.666120425Z"
+    created: "2021-07-31T13:12:32.546250773Z"
     dependencies:
     - condition: redis.enabled
       name: redis
-      repository: https://kibble1.github.io/charts/
+      repository: https://charts.bitnami.com/bitnami
       version: 9.3.2
     - condition: kafka.enabled
       name: kafka
-      repository: https://kibble1.github.io/charts/
+      repository: https://charts.bitnami.com/bitnami
       version: 12.0.0
     - condition: clickhouse.enabled
       name: clickhouse
-      repository: https://kibble1.github.io/charts/
+      repository: https://sentry-kubernetes.github.io/charts
       version: 3.0.0
     - alias: rabbitmq
       condition: rabbitmq.enabled
       name: rabbitmq
-      repository: https://kibble1.github.io/charts/
+      repository: https://charts.bitnami.com/bitnami
       version: 8.9.1
     - condition: postgresql.enabled
       name: postgresql
-      repository: https://kibble1.github.io/charts/
+      repository: https://charts.bitnami.com/bitnami
       version: 10.2.4
     - condition: nginx.enabled
       name: nginx
-      repository: https://kibble1.github.io/charts/
-      version: 9.3.3
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
     description: A Helm chart for Kubernetes
-    digest: b7c355213be2c3aec02c9d71de87cf0927bf50d0303006b02d6406514c3df84c
-    icon: https://www.sentry.dev/_assets2/favicon.ico
+    digest: 67bffff0f15ffca9a9514678acdd35cf8f8252652c69686ed35bc79e6813d713
     name: sentry
     type: application
     urls:
-    - https://kibble1.github.io/charts/sentry-11.4.0.tgz
+    - https://sentry-kubernetes.github.io/charts/sentry-11.4.1.tgz
+    version: 11.4.1
+  - apiVersion: v2
+    appVersion: 21.6.1
+    created: "2021-07-31T13:12:32.519021781Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 8ccb5f97ac0e3cfb610e3ecb103fc58cac64ab6d591f92dee386bb80f2b6beab
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.4.0.tgz
     version: 11.4.0
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-08-16T16:38:01.641967072Z"
+    created: "2021-07-31T13:12:32.491920391Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -726,16 +404,15 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 6.0.5
     description: A Helm chart for Kubernetes
-    digest: 74645adde73b1ee25b35ed221eca428be0c011831b6631bc345f729fa4598008
-    icon: https://www.sentry.dev/_assets2/favicon.ico
+    digest: 7d26f346ac75fee86f18b0e5526442d21fc71cbb401503e0479fddddcd030837
     name: sentry
     type: application
     urls:
-    - https://kibble1.github.io/charts/sentry-11.3.3.tgz
+    - https://sentry-kubernetes.github.io/charts/sentry-11.3.3.tgz
     version: 11.3.3
   - apiVersion: v2
     appVersion: 21.5.1
-    created: "2021-08-16T16:38:01.617558717Z"
+    created: "2021-07-31T13:12:32.464259794Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -763,16 +440,3256 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 6.0.5
     description: A Helm chart for Kubernetes
-    digest: efec8147afcb919f9717370a343f44d7468dd6d664606bb41beb1bcd728f3544
+    digest: 33dc3b724dd0b054fe1471af247dded782b0e1203a93a97a3c87c99867c42be4
     name: sentry
     type: application
     urls:
-    - https://kibble1.github.io/charts/sentry-11.3.2.tgz
+    - https://sentry-kubernetes.github.io/charts/sentry-11.3.2.tgz
     version: 11.3.2
+  - apiVersion: v2
+    appVersion: 21.5.1
+    created: "2021-07-31T13:12:32.43582899Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 858bbe36e15d37be240ff832aa2e88702496e8c932733ae079ad5d8a459983d5
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.3.1.tgz
+    version: 11.3.1
+  - apiVersion: v2
+    appVersion: 21.5.1
+    created: "2021-07-31T13:12:32.408208194Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 09bbbea05f2390d31de3137a7bb8ce5cebc565df9dd640be00e7b7307c953131
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.3.0.tgz
+    version: 11.3.0
+  - apiVersion: v2
+    appVersion: 21.4.1
+    created: "2021-07-31T13:12:32.380253994Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 77a29e9a525e51e2dbb65f972e063ad0c7852f7a09b0e7dc07bcf17f4b4c2f5c
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.2.2.tgz
+    version: 11.2.2
+  - apiVersion: v2
+    appVersion: 21.4.1
+    created: "2021-07-31T13:12:32.350662277Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: d37fbab91c87a53b15cd716b197d14226111499fd6b92e2a6e5fceb47df6d80e
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.2.1.tgz
+    version: 11.2.1
+  - apiVersion: v2
+    appVersion: 21.4.0
+    created: "2021-07-31T13:12:32.319092039Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: c28a0403c87a523d822ab058cf122481f355a7e025ed6fdde9047e9ad8cc800d
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.2.0.tgz
+    version: 11.2.0
+  - apiVersion: v2
+    appVersion: 21.4.0
+    created: "2021-07-31T13:12:32.291048239Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 764f68a7acd82493db07efb4291121937fa9f1d407e61c2300c40a9e81e830ad
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.1.0.tgz
+    version: 11.1.0
+  - apiVersion: v2
+    appVersion: 21.3.1
+    created: "2021-07-31T13:12:32.264037449Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: eb5fc5fa296f9defcb9aed3397885ac527134abdd149c0e0c64c56540ebd19d7
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.0.1.tgz
+    version: 11.0.1
+  - apiVersion: v2
+    appVersion: 21.3.0
+    created: "2021-07-31T13:12:32.233778925Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 3.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 8721912b2ff955469668489fb91de1609ed95ec95a5958746a89df61f1a76901
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-11.0.0.tgz
+    version: 11.0.0
+  - apiVersion: v2
+    appVersion: 21.3.0
+    created: "2021-07-31T13:12:32.208039349Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 2.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 064f9dffea69b508d361e2529c67308e54cd586acc99d15cd74e9af6cf47f5b9
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-10.1.0.tgz
+    version: 10.1.0
+  - apiVersion: v2
+    appVersion: 21.2.0
+    created: "2021-07-31T13:12:32.180429054Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 2.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 4b4bf172ce26904873b6ac8b4154b980a7e51cb631f800c6ccd4a3870ab857d3
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-10.0.0.tgz
+    version: 10.0.0
+  - apiVersion: v2
+    appVersion: 21.2.0
+    created: "2021-07-31T13:12:33.933229431Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 21c8fc60caf138ff9e754d405d1f913433b2a861dc518978dcd92b42040af132
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-9.1.2.tgz
+    version: 9.1.2
+  - apiVersion: v2
+    appVersion: 21.2.0
+    created: "2021-07-31T13:12:33.90706165Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 2cc2001f0df9204c7d459644424589c28bb76a9af235eb9d38f79be12b2dca63
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-9.1.1.tgz
+    version: 9.1.1
+  - apiVersion: v2
+    appVersion: 21.2.0
+    created: "2021-07-31T13:12:33.880483066Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 6f76a1972ba3753c5278fd52c004521b1ea9cc2257a0eb18f0e1959ddf60120c
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-9.1.0.tgz
+    version: 9.1.0
+  - apiVersion: v2
+    appVersion: 21.1.0
+    created: "2021-07-31T13:12:33.854689089Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 7d11d2abaae5a5a1b741dc18e500da8355fe6a0052d9d62808fd3967db899c4b
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-9.0.2.tgz
+    version: 9.0.2
+  - apiVersion: v2
+    appVersion: 21.1.0
+    created: "2021-07-31T13:12:33.826485587Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: b2bb1b8e22f7d76d68f159434aa9c20677806cd3b3e43c7dbdb4dadbcc2aafb9
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-9.0.1.tgz
+    version: 9.0.1
+  - apiVersion: v2
+    appVersion: 21.1.0
+    created: "2021-07-31T13:12:33.800523909Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.9.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.4
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 81ed80ed6def48d77f7fb48a8de4c1bf398d0751595f290f8a8e359c1cb5fa1b
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-9.0.0.tgz
+    version: 9.0.0
+  - apiVersion: v2
+    appVersion: 20.12.1
+    created: "2021-07-31T13:12:33.774152327Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 80c0bdb965a808450e03a6f7d5f3595ca8582b8995a451e32ba2cdaa236c54d1
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-8.1.3.tgz
+    version: 8.1.3
+  - apiVersion: v2
+    appVersion: 20.12.1
+    created: "2021-07-31T13:12:33.751865188Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: cf0ee8522b0a12290a787830e2d985d30d3f81ed76e9ae591b2c433ce93c45ef
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-8.1.2.tgz
+    version: 8.1.2
+  - apiVersion: v2
+    appVersion: 20.12.1
+    created: "2021-07-31T13:12:33.728600839Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: e0fde8b8915951379b4220f68286f1b4cc81607368bb642c62fd3cd7df5ca36f
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-8.1.1.tgz
+    version: 8.1.1
+  - apiVersion: v2
+    appVersion: 20.12.1
+    created: "2021-07-31T13:12:33.705126087Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 25a3e5085273fe254cfcbadb20413c0ec7b77a5865efce741d1c7115773d6049
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-8.1.0.tgz
+    version: 8.1.0
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.680986428Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 1665c967f8aa0bcea1d9cbd0ef8e60cf6b1c66e54023e0db822bae9a43a8f540
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-8.0.1.tgz
+    version: 8.0.1
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.657101673Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 8340e13fd556c365daeeab06f8fcba182f18e8e7fe84dadd7160f2e4943074cb
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-8.0.0.tgz
+    version: 8.0.0
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.633766223Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: f123f768db864ec09f52b036dfc52e435ad3e5f983965cb5e6591f3eef274c18
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-7.4.1.tgz
+    version: 7.4.1
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.610645375Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.0
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: eb6753c322e405828a47947211162325b431fef484fb643609c5a3500498838c
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-7.4.0.tgz
+    version: 7.4.0
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.587863231Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 01d0cbf4e6bdefa40a02ab1890203423fdf25d6aadc1696f546649c8e5898401
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-7.3.1.tgz
+    version: 7.3.1
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.565022386Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: b10b541f33fc948a360fb96c60171ccc2ca99d78b9cd3cee277967971b3790bc
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-7.3.0.tgz
+    version: 7.3.0
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.542226042Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://charts.helm.sh/stable
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.helm.sh/stable
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 878f7b090b473f960132c7ecc3a241fee4505620e9a9dc011c0ed427a0738a07
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-7.2.1.tgz
+    version: 7.2.1
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.5196325Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 547d7b3f73797e963f2241aa120923f204c9e58f0a171d165cae48f2422ec951
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-7.2.0.tgz
+    version: 7.2.0
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.497085258Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 331608a580faf00aed2a39b68e0b02768c0aaa517b8c4112ea54192928887f8b
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-7.1.0.tgz
+    version: 7.1.0
+  - apiVersion: v2
+    appVersion: 20.10.1
+    created: "2021-07-31T13:12:33.473402905Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 83deaf8fa42fee936d74160a6c1e7346bc74aa893b3f579c71c39964e3ea58ba
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-7.0.0.tgz
+    version: 7.0.0
+  - apiVersion: v2
+    appVersion: 20.9.0
+    created: "2021-07-31T13:12:33.450682161Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: f074a8a65e7c33c5a3dd6a11fdbd97fc0737e9db8c819faf7b82bb69fc109352
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-6.2.1.tgz
+    version: 6.2.1
+  - apiVersion: v2
+    appVersion: 20.9.0
+    created: "2021-07-31T13:12:33.429478234Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: cafc81fa950764b5f0c90b1510f2782d5a1393868035192dd2888927a7fa9026
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-6.2.0.tgz
+    version: 6.2.0
+  - apiVersion: v2
+    appVersion: 20.9.0
+    created: "2021-07-31T13:12:33.40671999Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: ba4b061a7bcceafd611a6a53aea9d24cd280569f231f28cd163a030bbd472b1f
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-6.1.0.tgz
+    version: 6.1.0
+  - apiVersion: v2
+    appVersion: 20.9.0
+    created: "2021-07-31T13:12:33.373495534Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 65e5919b4b6cc3af8d5f421c19884729f5af5da1bb5608c97d1fa89b4d76040f
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-6.0.0.tgz
+    version: 6.0.0
+  - apiVersion: v2
+    appVersion: 20.9.0
+    created: "2021-07-31T13:12:33.337853553Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 7691257c49fb797fb8e18354e4b9556606850a39692eae936c17735a234c99a2
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.6.1.tgz
+    version: 5.6.1
+  - apiVersion: v2
+    appVersion: 20.9.0
+    created: "2021-07-31T13:12:33.316387023Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: a73ba635ec168350bbb254631398b0d53868016652f37d22ddee9371f5c06788
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.6.0.tgz
+    version: 5.6.0
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.295012794Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 56dd174a7f70cb720c4df47e1edce6567d98c811c0d41e76df473cc5138d2858
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.5.0.tgz
+    version: 5.5.0
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.272960557Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 989cb147829570a60d9faef941ad27d81fb4af81777528775bf03e393c805eea
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.4.0.tgz
+    version: 5.4.0
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.250640018Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: eb82a640886a9ec320c79782582020d08e3418006a2938c8ecc649bef7265b04
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.3.0.tgz
+    version: 5.3.0
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.227559471Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 99543c2e9e5d9627518c8f50c9abd680e78f8e0c769e31888d2aeb60eaca3b9a
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.2.3.tgz
+    version: 5.2.3
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.199515971Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 71781cd7fe3a5902beea219d1ffe01d578b86ca2b365bc06e35a987517358de0
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.2.2.tgz
+    version: 5.2.2
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.176917929Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 877cd1700f8e14d6f42ce0c2b5f1ee4a209c907fbbf273008277484dcf8942e4
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.2.1.tgz
+    version: 5.2.1
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.1555597Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 512f0c2cc478d8d013959dba1375c0e0ffea709d4f03b8a38a339e0100118437
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.2.0.tgz
+    version: 5.2.0
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.132989458Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: cc58fb7db1df13ae4a4979d0c6a753c4648105bf0c9cfe4cf5d01b0657992a6c
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.1.3.tgz
+    version: 5.1.3
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.11079272Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 3ec71d5b8911b0ff1b1123aa794c131716b5ab638a0a75803de05aa69dff3734
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.1.2.tgz
+    version: 5.1.2
+  - apiVersion: v2
+    appVersion: 20.8.1
+    created: "2021-07-31T13:12:33.089099688Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 8e5652d0625790aa13d8b8fd2d8621b1f2cea5d322c9606b74050a1d9c0ae083
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.1.1.tgz
+    version: 5.1.1
+  - apiVersion: v2
+    appVersion: 20.8.0
+    created: "2021-07-31T13:12:33.067603058Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 4e719d2c4d4d58ae12df82e474eca18a491a641a84f8e774631e054922625db1
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.1.0.tgz
+    version: 5.1.0
+  - apiVersion: v2
+    appVersion: 20.7.2
+    created: "2021-07-31T13:12:33.04449311Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 662949673fde7ac17f009a2068056abbd5e0dd0bfb9585f34e78fc42bb3235a6
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.0.1.tgz
+    version: 5.0.1
+  - apiVersion: v2
+    appVersion: 20.7.2
+    created: "2021-07-31T13:12:33.022911479Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.0.5
+    description: A Helm chart for Kubernetes
+    digest: 882e92a940ceb90557785f79e6a89144f9559cd806d63f6bf732c6546f665fc3
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-5.0.0.tgz
+    version: 5.0.0
+  - apiVersion: v2
+    appVersion: 20.7.0
+    created: "2021-07-31T13:12:32.999871332Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: dcb3f396541305fd3a6ac759bf787f884be3709442b28a90fba033dd98995dec
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.8.1.tgz
+    version: 4.8.1
+  - apiVersion: v2
+    appVersion: 20.7.0
+    created: "2021-07-31T13:12:32.981585636Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 353b02cf8f153fc0eea8d86b72b37406a19a58377c824db26341e9038f91f654
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.8.0.tgz
+    version: 4.8.0
+  - apiVersion: v2
+    appVersion: 20.7.0
+    created: "2021-07-31T13:12:32.962468631Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: b1dd264b2d342a091f4f294c3b738d4136104f2a21b1e313818ad05e6be5065e
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.7.2.tgz
+    version: 4.7.2
+  - apiVersion: v2
+    appVersion: 20.7.2
+    created: "2021-07-31T13:12:32.94364473Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: d808ae6226aae590500dca0584f794cc9549821f3f34d8ef94ec3f7ee1faa765
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.7.1.tgz
+    version: 4.7.1
+  - apiVersion: v2
+    appVersion: 20.7.2
+    created: "2021-07-31T13:12:32.924269822Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 5fba14a8dd11872e960b4ace55c9a25c00f9d5e90bbfa77fe055139f28578976
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.7.0.tgz
+    version: 4.7.0
+  - apiVersion: v2
+    appVersion: 20.7.2
+    created: "2021-07-31T13:12:32.903431499Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.5.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: aabcdb10165451d2673cec5c5c48fa005ee75eeecf16a33c65f295c45f9e9a8b
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.6.0.tgz
+    version: 4.6.0
+  - apiVersion: v2
+    appVersion: 20.7.2
+    created: "2021-07-31T13:12:32.883625587Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.4.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 763510256035460860bcd0906816350321da460e2adcecfcc5f47ad4b98a0be6
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.5.1.tgz
+    version: 4.5.1
+  - apiVersion: v2
+    appVersion: 20.7.2
+    created: "2021-07-31T13:12:32.863858975Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.4.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 5f9fc6cd069ee5937e69c78f6232d5933131bfbb79a08cbd3364b34ab67a71e8
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.5.0.tgz
+    version: 4.5.0
+  - apiVersion: v2
+    appVersion: 20.7.1
+    created: "2021-07-31T13:12:32.842984751Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.4.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 88b23a72feb98a27372f2512e93667ff631d910b7844afa3f68ae888f0e8092f
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.4.0.tgz
+    version: 4.4.0
+  - apiVersion: v2
+    appVersion: 20.7.1
+    created: "2021-07-31T13:12:32.822601333Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.4.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 4275712b40ff8a48a30eb0e34e6e665a7b90dbd8e9f92b2816a237d7d5618cbc
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.3.0.tgz
+    version: 4.3.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.801036702Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.4.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: ca1677b4e0bb7fa4f5f4c0c405cff951529513bec7bd11ca9922fa03eac05d97
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.2.0.tgz
+    version: 4.2.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.780910186Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.2.2
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 042de760836f48e757d96e088631aa0f173122498e6524349ac36a34c0c17382
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.1.0.tgz
+    version: 4.1.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.761933283Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.2.2
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: e33df0270ff89addef2f2cc61d795e165863d42b652fdb32eff264bcc14e2120
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-4.0.0.tgz
+    version: 4.0.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.743155282Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.2.2
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.39.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 4358a32b758b19ffc25af6f38c174af59c5a27b252bdf06ccca44184481e3f18
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-3.1.0.tgz
+    version: 3.1.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.723229468Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.2.2
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 01fdfaa9f1994c203c22c0f8ed1fa417a8c35dd83205e11dc9bcc188db6bb9bb
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-3.0.1.tgz
+    version: 3.0.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.704092863Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.2.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 94b2ee0dc2f4b669f5d866b716178a821d653c4f12451a19023a10cf4de25e84
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-3.0.0.tgz
+    version: 3.0.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.685173561Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.2.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: c53cc453cced3744bb61c0318165a0b4ec30cb97e05fb73361f60abd77052bdb
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-2.2.0.tgz
+    version: 2.2.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.664171536Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.1.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 9420f982fc55fd0de95fb732a589bf08f78de53bebab8e913db5d54e3c6782be
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.645981941Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.1.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 7d77e1fd0129bf61db6395ac4c1fe905603ed7b04309c5bac93b7f0676e83e3a
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-2.0.1.tgz
+    version: 2.0.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.626436932Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: f255cd91db2f36539d0718422c4c59cf0b2f162ba01c250b4f26fcb6a407a8c9
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.155126983Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: f84bad9673ea9100ef42a0a66d45a46fb6201b8b1868aff710e3b00d290ba110
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-1.3.1.tgz
+    version: 1.3.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.135826176Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 7ae359eac9e3631d64b5795eadecc98be24743ff3ecd1b264fa086a354f54c1e
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-1.3.0.tgz
+    version: 1.3.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.11660207Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://sentry-kubernetes.github.io/charts
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 9192ecb16cfd9c686d77683ddab17605d358583fa2486e8fce616f1f98d138f8
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.098011171Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 04c976d4f9cfe1350ba245358fe5026d70f878e0ebe5723e7a430c01fc3e5566
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.078013457Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 81b8203ac7a4b11b971e02219a6c3e8d097177f23d5e600f5575bdadc517d907
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.043578588Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: e7c3d96cf8c57f7d240d55b6a84de9f097ad9dbddaa9d3fcfadc76661f05171d
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.12.3.tgz
+    version: 0.12.3
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.025305592Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 41b57dd8742fc5c4049e4a7d7d74fd9e011d055d72e41db7501a5b7b2a5ac705
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.12.2.tgz
+    version: 0.12.2
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.006964195Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: ed521555e4b02cdd34f161ae8689cf7afe791ddd51b7ec7a1ea33468cc1b6944
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.12.1.tgz
+    version: 0.12.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:31.988538298Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: dc4198c3390e8dd5793e67bbc01ba554b76367c6f8e3be1c20388ef183ea4c48
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.12.0.tgz
+    version: 0.12.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:31.969492094Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 7cbc4580732044e89ec85013f8627e25f3e4a4522be62043cfdcfefb2b62f520
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.11.1.tgz
+    version: 0.11.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:31.949958385Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 510ed1ef45377e92db867846ebd8f029f7da4f29e1cecd12891df4096cfdf563
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.11.0.tgz
+    version: 0.11.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:31.930321574Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.3.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 9.0.4
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 70dc6a921a786fcc9d9c97cc198a75f7b1ae46d5c723509a28551fffa935ed04
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.060115265Z"
+    description: A Helm chart for Kubernetes
+    digest: ccf7aabac486a68779d6564d90a875b45fefa4e4a9e8f86903355cf886b6a3aa
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.9.4.tgz
+    version: 0.9.4
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.058847051Z"
+    description: A Helm chart for Kubernetes
+    digest: 07b380bbb341bb276b962de0b3721c9142a97e9fd084a394fc4d9f5db75bceea
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.9.3.tgz
+    version: 0.9.3
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.057531237Z"
+    description: A Helm chart for Kubernetes
+    digest: a5a52cb5362e604215b1811e053a1b790d8f2e6c0c553a55d52f0750a6f63936
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.9.2.tgz
+    version: 0.9.2
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.056232523Z"
+    description: A Helm chart for Kubernetes
+    digest: 81e65b09754dea768122d4d619801bab77714f9c77520afbc1658c7bf68b563d
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.9.1.tgz
+    version: 0.9.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.054918509Z"
+    description: A Helm chart for Kubernetes
+    digest: 225f13adbe6a002014b135afc02b65771fbb5bbdf6f09e3179a408beb316846c
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.9.0.tgz
+    version: 0.9.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.053630695Z"
+    description: A Helm chart for Kubernetes
+    digest: aef5a5cd789251ab629d25d18ac94a7801e80fb99dde54dc98111e7547326ce8
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.05216618Z"
+    description: A Helm chart for Kubernetes
+    digest: 2ced97e545a92598f9b3bc487aa53b7b4cd6df8ba2b97ffbce5807a6e0a641d0
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.049674553Z"
+    description: A Helm chart for Kubernetes
+    digest: bf3b118679f72f65fa20120dfd4c1718b56694250e80dac285189a0073a2fbcc
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.6.1.tgz
+    version: 0.6.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.047612131Z"
+    description: A Helm chart for Kubernetes
+    digest: b24391c885cb84817b024df7feb81feb6d97443a1e7cf26d6a7a04cdd3e1af0c
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.046287517Z"
+    description: A Helm chart for Kubernetes
+    digest: 476900c519773349f70e8d0171f870ba5ad7983c62fcc72ae3b7799948500f33
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:32.044812901Z"
+    description: A Helm chart for Kubernetes
+    digest: 0da209fcf559a3aa66ef7715cf6327da2337e3739fff89e06a25d2e6a1488765
+    name: sentry
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-0.2.1.tgz
+    version: 0.2.1
+  sentry-db:
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:34.125914395Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: eb8fa75235442f43d3c2000473eef60e10ed58ce5eb1de506f8d5054c8379be4
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.9.4.tgz
+    version: 0.9.4
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:34.105778779Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 4b7986994d2e79f3664facd592f705d5b0658ecda3584687c578bfb0db44b43b
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.9.3.tgz
+    version: 0.9.3
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:34.088650396Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 85e5b6875d3e59f675d8bfc957a209d7755302fa235923086615a6b381f7b8c0
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.9.2.tgz
+    version: 0.9.2
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:34.07136841Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: c225992e35fb2427eaf4ed6ef404e8ae4de4e89d8391f5abe321f29fd80ee154
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.9.1.tgz
+    version: 0.9.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:34.054191326Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: c14162069acb7135e908e263fa20e05166e95cc5f4ad633fe6a0b8c7c8534c13
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.9.0.tgz
+    version: 0.9.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:34.037532448Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: b125bb297c23d319dabe141536a9bd014538edf0b26d8847249aa28fe3627fa6
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.8.0.tgz
+    version: 0.8.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:34.019917559Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: c61a9ea0ce22cc86d105d4d88e1e8f11ef65764847dce5b405fbd91419bf611a
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:34.002428572Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 24f7a94f3d6f194b5d1cf678467b4cec4551c398e83d615d2312e90466202db9
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.6.1.tgz
+    version: 0.6.1
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:33.985682393Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 3b9097700de785f1bad79a99c9f469a920f984efe699a457f8ada5bb608b8417
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:33.967610299Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: 2bb4095a0774ccc5b418a1ca031889e1796ecf537bb1ff8e798b5b26a48f3b85
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.5.0.tgz
+    version: 0.5.0
+  - apiVersion: v2
+    appVersion: 10.0.0
+    created: "2021-07-31T13:12:33.950143612Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.1.1
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://liwenhe1993.github.io/charts/
+      version: 1.0.1
+    - condition: rabbitmq-ha.enabled
+      name: rabbitmq-ha
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 1.38.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://kubernetes-charts.storage.googleapis.com/
+      version: 8.2.1
+    description: A Helm chart for Kubernetes
+    digest: ca96424a03a019c13e38bfb1a870081f8ade5b1503b493925732c0b8000d11b0
+    name: sentry-db
+    type: application
+    urls:
+    - https://sentry-kubernetes.github.io/charts/sentry-db-0.2.1.tgz
+    version: 0.2.1
   sentry-kubernetes:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-08-16T16:38:01.868619613Z"
+    created: "2021-07-31T13:12:34.126820205Z"
     description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
     digest: 233c575ab9e3eb3f63ee347cf32d3719b22e6546952a160cf253b32f895b5b83
     home: https://github.com/getsentry/sentry-kubernetes
@@ -786,29 +3703,24 @@ entries:
     - https://github.com/sentry-kubernetes/charts
     type: application
     urls:
-    - https://kibble1.github.io/charts/sentry-kubernetes-0.3.1.tgz
+    - https://sentry-kubernetes.github.io/charts/sentry-kubernetes-0.3.1.tgz
     version: 0.3.1
-  zookeeper:
-  - annotations:
-      category: Infrastructure
-    apiVersion: v2
-    appVersion: 3.6.2
-    created: "2021-08-16T16:38:01.871195629Z"
-    description: A centralized service for maintaining configuration information,
-      naming, providing distributed synchronization, and providing group services
-      for distributed applications.
-    digest: 14691d7ad2635dcdd41b05caee0e931989deb54134f4599beb34ac84c4117b54
-    home: https://github.com/bitnami/charts/tree/master/bitnami/zookeeper
-    icon: https://bitnami.com/assets/stacks/zookeeper/img/zookeeper-stack-110x117.png
+  - apiVersion: v2
+    appVersion: latest
+    created: "2021-07-31T13:12:34.1264079Z"
+    description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
+    digest: 727778ddeffa08ad086e07dc6014f13a905145cde1d257816df2fd52f1ec93db
+    home: https://github.com/getsentry/sentry-kubernetes
+    icon: https://sentry-brand.storage.googleapis.com/sentry-glyph-white.png
     keywords:
-    - zookeeper
-    maintainers:
-    - email: containers@bitnami.com
-      name: Bitnami
-    name: zookeeper
+    - sentry
+    - report kubernetes events
+    name: sentry-kubernetes
     sources:
-    - https://kibble1.github.io/charts/
+    - https://github.com/getsentry/sentry-kubernetes
+    - https://github.com/sentry-kubernetes/charts
+    type: application
     urls:
-    - https://kibble1.github.io/charts/zookeeper-6.0.0.tgz
-    version: 6.0.0
-generated: "2021-08-16T16:38:01.563951676Z"
+    - https://sentry-kubernetes.github.io/charts/sentry-kubernetes-0.3.0.tgz
+    version: 0.3.0
+generated: "2021-07-31T13:12:31.889498237Z"
