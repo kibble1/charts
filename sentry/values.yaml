@@ -573,7 +573,7 @@ config:
   # No YAML Extension Config Given
   configYml: {}
   sentryConfPy: |
-    CSRF_TRUSTED_ORIGINS = ['sentry.spectools.intel.com']
+    # No Python Extension Config Given
   snubaSettingsPy: |
     # No Python Extension Config Given
   relay: |
