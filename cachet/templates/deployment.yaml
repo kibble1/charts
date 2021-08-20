@@ -1,12 +1,12 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "cachet.fullname" . }}
   labels:
     app: {{ template "cachet.name" . }}
     chart: {{ template "cachet.chart" . }}
-    release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: {{ template "cachet.fullname" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -20,57 +20,30 @@ spec:
         release: {{ .Release.Name }}
     spec:
       containers:
-        - name: {{ .Chart.Name }}
+        - name: cachethq
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:
-          - name: APP_KEY
-            valueFrom:
-              secretKeyRef:
-                name: {{ template "cachet.fullname" . }}
-                key: cachet-key
-          - name: DB_DRIVER
-            value: pgsql
-          - name: APP_DEBUG
-            value: "true"
-          - name: DB_HOST
-            value: {{ template "cachet.fullname" . }}-postgresql
-          - name: DB_DATABASE
-            value: {{ .Values.postgresql.postgresDatabase }}
-          - name: DB_USERNAME
-            value: postgres
-          - name: DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: {{ .Release.Name }}-postgresql
-                key: postgres-password
-          - name: MAIL_HOST
-            value: {{ .Values.mailHost }}
-          - name: APP_URL
-            value: https://status.dapt.to
+          envFrom:
+          - secretRef:
+              name: {{ template "cachet.fullname" . }}
+          - configMapRef:
+              name: {{ template "cachet.fullname" . }}
           ports:
-            - name: http
-              containerPort: 8000
-              protocol: TCP
+            - containerPort: {{ .Values.service.internalPort }}
           livenessProbe:
             httpGet:
               path: /api/v1/ping
-              port: http
+              port: {{ .Values.service.internalPort }}
+            initialDelaySeconds: 45
+            periodSeconds: 15
           readinessProbe:
             httpGet:
               path: /api/v1/ping
-              port: http
+              port: {{ .Values.service.internalPort }}
+            initialDelaySeconds: 25
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-    {{- with .Values.nodeSelector }}
+{{- if .Values.nodeSelector }}
       nodeSelector:
-{{ toYaml . | indent 8 }}
-    {{- end }}
-    {{- with .Values.affinity }}
-      affinity:
-{{ toYaml . | indent 8 }}
-    {{- end }}
-    {{- with .Values.tolerations }}
-      tolerations:
-{{ toYaml . | indent 8 }}
-    {{- end }}
+{{ toYaml .Values.nodeSelector | indent 8 }}
+{{- end }}

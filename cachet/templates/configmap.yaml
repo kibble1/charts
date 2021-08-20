@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app: {{ template "cachet.name" . }}
+    chart: {{ template "cachet.chart" . }}
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: {{ template "cachet.fullname" . }}
+data:
+  DB_DRIVER: "pgsql"
+  DB_HOST: {{ .Values.postgresql.postgresqlExternalHost | quote }}
+  DB_PORT: {{ .Values.postgresql.port | quote }}
+  DB_DATABASE: {{ .Values.postgresql.postgresqlDatabase | quote }}
+
+  MAIL_DRIVER: {{ .Values.email.type }}
+  MAIL_HOST: {{ .Values.email.host }}
+  MAIL_PORT: {{ .Values.email.port | quote }}
+  MAIL_ADDRESS: {{ .Values.email.fromEmail }}
+  MAIL_NAME: {{ .Values.email.fromName }}
+  MAIL_ENCRYPTION: tls
