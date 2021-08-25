@@ -72,7 +72,7 @@ diagnosticMode:
 ## @param image.debug Specify if debug values should be set
 ##
 image:
-  registry: docker.io
+  registry: cache-registry.caas.intel.com/cache
   repository: bitnami/postgresql
   tag: 11.12.0-debian-10-r44
   ## Specify a imagePullPolicy
@@ -87,7 +87,8 @@ image:
   ## pullSecrets:
   ##   - myRegistryKeySecretName
   ##
-  pullSecrets: []
+  pullSecrets:
+    - name: cache-registry
   ## Set to true if you would like to see extra information on logs
   ## It turns BASH and/or NAMI debugging in the image
   ##
@@ -106,7 +107,7 @@ volumePermissions:
   ## @param volumePermissions.image.pullSecrets Init container volume-permissions image pull secrets
   ##
   image:
-    registry: docker.io
+    registry: cache-registry.caas.intel.com/cache
     repository: bitnami/bitnami-shell
     tag: 10-debian-10-r125
     ## Specify a imagePullPolicy
@@ -121,7 +122,8 @@ volumePermissions:
     ## pullSecrets:
     ##   - myRegistryKeySecretName
     ##
-    pullSecrets: []
+    pullSecrets:
+    - name: cache-registry
   ## Init container Security Context
   ## @param volumePermissions.securityContext.runAsUser User ID for the init container
   ## Note: the chown of the data folder is done to securityContext.runAsUser

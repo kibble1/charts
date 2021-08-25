@@ -25,7 +25,7 @@ The following table lists the configurable parameters of the Cachet chart and it
 | Parameter | Description | Default |
 | --------- | ----------- | ------- |
 | `image.repository` | Image Repository | `"cachethq/docker"` |
-| `image.tag` | Image Tag | `"2.3.14"` |
+| `image.tag` | Image Tag | `"2.3.18"` |
 | `image.pullPolicy` | Image Pull Policy | `"IfNotPresent"` |
 | `appKey` | Laravel 5 Application Key | `""` |
 | `postgresql.enabled` | - | `true` |
