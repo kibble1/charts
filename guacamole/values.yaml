@@ -47,7 +47,7 @@ mysql:
     restartPolicy: Always
   MYSQL_DATABASE: guacamole_db
   MYSQL_USER: guacamole
-  MYSQL_PASSWORD: changeme!
+  MYSQL_PASSWORD: changeme
   HostName: "mysql"
   nodeSelector: {}
   livenessProbe:
