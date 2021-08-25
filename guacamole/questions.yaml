@@ -4,8 +4,10 @@ questions:
     description: "Define Guacamole Database User"
     required: true
     label: "Guacamole Database User"
+    type: string
   - variable: mysql.MYSQL_PASSWORD
     default: "changeme!"
     description: "Define Guacamole Database User Password"
     required: true
     label: "Guacamole Database User Password"
+    type: password
