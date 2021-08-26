@@ -1,6 +1,6 @@
 image:
-  repository: cachethq/docker
-  tag: 2.3.18
+  repository: sedan07/cachet
+  tag: 2.5.0
   pullPolicy: IfNotPresent
 
 appKey: ""
