@@ -1,47 +1,31 @@
-prefix:
-
-user:
-  create: true
-  email: admin@sentry.local
-  password: aaaa
-
-# this is required on the first installation, as sentry has to be initialized first
-# recommended to set false for updating the helm chart afterwards,
-# as you will have some downtime on each update if it's a hook
-# deploys relay & snuba consumers as post hooks
-asHook: true
-
+apiVersion: v2
 images:
   sentry:
-    # repository: getsentry/sentry
-    # tag: Chart.AppVersion
-    # pullPolicy: IfNotPresent
+    registry: amr-registry-pre.caas.intel.com/spec-tools
+    repository: getsentry/sentry
+    tag: Chart.AppVersion
+    pullPolicy: IfNotPresent
     imagePullSecrets: []
   snuba:
-    # repository: getsentry/snuba
-    # tag: Chart.AppVersion
-    # pullPolicy: IfNotPresent
+    registry: amr-registry-pre.caas.intel.com/spec-tools
+    repository: getsentry/snuba
+    tag: Chart.AppVersion
+    pullPolicy: IfNotPresent
     imagePullSecrets: []
   relay:
-    # repository: getsentry/relay
-    # tag: Chart.AppVersion
-    # pullPolicy: IfNotPresent
+    registry: amr-registry-pre.caas.intel.com/spec-tools
+    repository: getsentry/relay
+    tag: Chart.AppVersion
+    pullPolicy: IfNotPresent
     imagePullSecrets: []
   symbolicator:
-    # repository: getsentry/symbolicator
-    tag: 0.3.3
-    # pullPolicy: IfNotPresent
+    registry: amr-registry-pre.caas.intel.com/spec-tools
+    repository: getsentry/symbolicator
+    tag: Chart.AppVersion
+    pullPolicy: IfNotPresent
     imagePullSecrets: []
 
-serviceAccount:
-  # serviceAccount.annotations -- Additional Service Account annotations.
-  annotations: {}
-  # serviceAccount.enabled -- If `true`, a custom Service Account will be used.
-  enabled: false
-  # serviceAccount.name -- The base name of the ServiceAccount to use. Will be appended with e.g. `snuba-api` or `web` for the pods accordingly.
-  name: "sentry"
-  # serviceAccount.automountServiceAccountToken -- Automount API credentials for a Service Account.
-  automountServiceAccountToken: true
+
 
 relay:
   replicas: 1
@@ -68,7 +52,7 @@ relay:
   volumes: [ ]
 
 sentry:
-  singleOrganization: true
+  singleOrganization: false
   web:
     # if using filestore backend filesystem with RWO access, set strategyType to Recreate
     strategyType: RollingUpdate

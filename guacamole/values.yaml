@@ -2,80 +2,222 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 1
-
 guacamole:
+  replicaCount: 1
+
   image:
     repository: guacamole/guacamole
     tag: "{{ .Chart.AppVersion }}"
     pullPolicy: IfNotPresent
-    restartPolicy: Always
-  HostName: "guacamole"
+
   nameOverride: ""
   fullnameOverride: ""
+
   service:
     type: ClusterIP
     port: 80
+
+  mysql:
+    MYSQL_HOSTNAME: guacamole-mysql
+    MYSQL_PORT: 3306
+
+  ingress:
+    enabled: true
+    annotations: {}
+      # ingress.kubernetes.io/ssl-redirect: "true"
+      # kubernetes.io/tls-acme: "true"
+      # certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    paths: []
+    #  - backend:
+    #      serviceName: ssl-redirect
+    #      servicePort: use-annotation
+    #  - backend:
+    #      serviceName: >-
+    #        {{ include "guacamole.fullname" . }}
+    #      # Don't use string here, use only integer value!
+    #      servicePort: 443
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    path: /
+    hosts:
+      - guacamole.mxbx.net
+    tls: {}
+    # - hosts:
+    #   - guacamole.corp.justin-tech.com
+
+  resources: {}
+    # We usually recommend not to specify default resources and to leave this as a conscious
+    # choice for the user. This also increases chances charts run on environments with little
+    # resources, such as Minikube. If you do want to specify resources, uncomment the following
+    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+    # limits:
+    #  cpu: 100m
+    #  memory: 128Mi
+    # requests:
+    #  cpu: 100m
+    #  memory: 128Mi
+
+  persistence:
+    plugins:
+      enabled: true
+      accessMode: ReadWriteOnce
+      size: 8Gi
+      storageClass: ""
+      # existingClaim: existing-pvc
+
+  configurationFiles:
+    guacamole.properties: |-
+      enable-environment-properties: true
+      # # OIDC properties
+      # openid-authorization-endpoint:
+      # openid-jwks-endpoint:
+      # openid-issuer:
+      # openid-client-id: guacamole
+      # openid-redirect-uri:
+      # openid-username-claim-type: username
+      # openid-scope: openid email profile
+      # openid-allowed-clock-skew: 500
+
+
   nodeSelector: {}
+
   tolerations: []
+
   affinity: {}
+
   # Change this to ROOT to get rid of the /guacamole prefix
-  # webapp_context: guacamole
-  webapp_context: ROOT
+  webapp_context: guacamole
 
 guacd:
+  replicaCount: 1
+
   image:
     repository: guacamole/guacd
     tag: "{{ .Chart.AppVersion }}"
     pullPolicy: IfNotPresent
-    restartPolicy: Always
-  HostName: "guacd"
+
   nameOverride: "guacd"
   fullnameOverride: "guacd"
+
   service:
     type: ClusterIP
     port: 4822
+
+  resources: {}
+    # We usually recommend not to specify default resources and to leave this as a conscious
+    # choice for the user. This also increases chances charts run on environments with little
+    # resources, such as Minikube. If you do want to specify resources, uncomment the following
+    # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+    # limits:
+    #  cpu: 100m
+    #  memory: 128Mi
+    # requests:
+    #  cpu: 100m
+    #  memory: 128Mi
+
   nodeSelector: {}
+
   tolerations: []
+
   affinity: {}
 
+
 mysql:
-  image:
-    repository: mysql/mysql-server
-    tag: "latest"
-    pullPolicy: IfNotPresent
-    restartPolicy: Always
-  MYSQL_DATABASE: guacamole_db
-  MYSQL_USER: guacamole
-  MYSQL_PASSWORD: changeme
-  HostName: "mysql"
+  ## mysql image version
+  ## ref: https://hub.docker.com/r/library/mysql/tags/
+  ##
+  image: "mysql"
+  imageTag: "5.7.14"
+
+  ## Specify password for root user
+  ##
+  # Default: random 10 character string
+  mysqlRootPassword: h*kd-Pler34
+
+  ## Create a database user
+  ##
+  #mysqlUser: guacamole
+  ## Default: random 10 character string
+  #mysqlPassword: changeme
+
+  imagePullPolicy: IfNotPresent
+
+  extraVolumes: |
+    # - name: extras
+    #   emptyDir: {}
+
+  extraVolumeMounts: |
+    # - name: extras
+    #   mountPath: /usr/share/extras
+    #   readOnly: true
+
+  extraInitContainers: |
+    # - name: do-something
+    #   image: busybox
+    #   command: ['do', 'something']
+
+  # Optionally specify an array of imagePullSecrets.
+  # Secrets must be manually created in the namespace.
+  # ref: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod
+  # imagePullSecrets:
+    # - name: myRegistryKeySecretName
+
+  ## Node selector
+  ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
   nodeSelector: {}
+
   livenessProbe:
     initialDelaySeconds: 30
     periodSeconds: 10
     timeoutSeconds: 5
     successThreshold: 1
     failureThreshold: 3
+
   readinessProbe:
     initialDelaySeconds: 5
     periodSeconds: 10
     timeoutSeconds: 1
     successThreshold: 1
     failureThreshold: 3
+
+  ## Persist data to a persistent volume
+  persistence:
+    enabled: true
+    ## database data Persistent Volume Storage Class
+    ## If defined, storageClassName: <storageClass>
+    ## If set to "-", storageClassName: "", which disables dynamic provisioning
+    ## If undefined (the default) or set to null, no storageClassName spec is
+    ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+    ##   GKE, AWS & OpenStack)
+    ##
+    storageClass: ""
+    accessMode: ReadWriteOnce
+    size: 8Gi
+    annotations: {}
+
+  ## Configure resource requests and limits
+  ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
+  ##
+  resources:
+    requests:
+      memory: 256Mi
+      cpu: 100m
+
+  # Custom mysql configuration files used to override default mysql settings
+  configurationFiles: {}
+  #  mysql.cnf: |-
+  #    [mysqld]
+  #    skip-name-resolve
+  #    ssl-ca=/ssl/ca.pem
+  #    ssl-cert=/ssl/server-cert.pem
+  #    ssl-key=/ssl/server-key.pem
+
+  ## Configure the service
+  ## ref: http://kubernetes.io/docs/user-guide/services/
   service:
     type: ClusterIP
     port: 3306
 
-imagePullSecrets: []
-
-serviceAccount:
-  # Specifies whether a service account should be created
-  create: true
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
-  name:
-
-# Custom mysql init SQL files used to initialize the database
+  # Custom mysql init SQL files used to initialize the database
   initializationFiles:
    first-db.sql: |-
     CREATE DATABASE IF NOT EXISTS guacamole_db DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
