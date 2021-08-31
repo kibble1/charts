@@ -7,7 +7,7 @@ guacamole:
 
   image:
     repository: guacamole/guacamole
-    tag: "{{ .Chart.AppVersion }}"
+    tag: .Chart.AppVersion
     pullPolicy: IfNotPresent
 
   nameOverride: ""
@@ -92,7 +92,7 @@ guacd:
 
   image:
     repository: guacamole/guacd
-    tag: "{{ .Chart.AppVersion }}"
+    tag: .Chart.AppVersion
     pullPolicy: IfNotPresent
 
   nameOverride: "guacd"
