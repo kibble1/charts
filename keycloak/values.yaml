@@ -95,18 +95,18 @@ command: []
 ## Overrides the default args for the Keycloak container
 args: []
 
-  ## Username for the initial Keycloak admin user
-  username: keycloak
+## Username for the initial Keycloak admin user
+username: keycloak
 
-  ## Password for the initial Keycloak admin user. Applicable only if existingSecret is not set.
-  ## If not set, a random 10 characters password will be used
-  password: ""
+## Password for the initial Keycloak admin user. Applicable only if existingSecret is not set.
+## If not set, a random 10 characters password will be used
+password: ""
 
-  # Specifies an existing secret to be used for the admin password
-  existingSecret: ""
+# Specifies an existing secret to be used for the admin password
+existingSecret: ""
 
-  # The key in the existing secret that stores the password
-  existingSecretKey: password
+# The key in the existing secret that stores the password
+existingSecretKey: password
 
 # Additional environment variables for Keycloak
 extraEnv: ""
