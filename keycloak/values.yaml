@@ -199,16 +199,16 @@ resources: {}
   #   memory: "1024Mi"
 
 
-  # The following will enable PKI authentication
-  # You will need to create a config-map that hosts your keystore/truststore.
+# The following will enable PKI authentication
+# You will need to create a config-map that hosts your keystore/truststore.
 
-  pki:
-    enabled: true
-    keystore:
-      alias: keycloak
-      password: password
-    truststore:
-      password: password
+pki:
+  enabled: true
+  keystore:
+    alias: keycloak
+    password: password
+  truststore:
+    password: password
 
 # Startup scripts to run before Keycloak starts up
 startupScripts:
