@@ -24,7 +24,7 @@ keycloak:
 
   image:
     repository: jboss/keycloak
-    tag: 9.0.2
+    tag: 15.0.2
     pullPolicy: IfNotPresent
 
     ## Optionally specify an array of imagePullSecrets.
@@ -184,9 +184,9 @@ keycloak:
     enabled: true
     keystore:
       alias: keycloak
-      password: password
+      password: ''
     truststore:
-      password: password
+      password: ''
 
   ## WildFly CLI configurations. They all end up in the file 'keycloak.cli' configured in the configmap which is
   ## executed on server startup.
