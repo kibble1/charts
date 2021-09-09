@@ -21,18 +21,11 @@ clusterDomain: cluster.local
 
 keycloak:
   replicas: 1
-
   image:
     repository: jboss/keycloak
     tag: 15.0.2
     pullPolicy: IfNotPresent
-
-    ## Optionally specify an array of imagePullSecrets.
-    ## Secrets must be manually created in the namespace.
-    ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
-    ##
     pullSecrets: []
-    # - myRegistrKeySecretName
 
   hostAliases: []
   #  - ip: "1.2.3.4"
@@ -104,6 +97,10 @@ keycloak:
   javaToolOptions: >-
     -XX:+UseContainerSupport
     -XX:MaxRAMPercentage=50.0
+    -Dhttp.proxyHost=proxy-chain.intel.com
+    -Dhttp.proxyPort=911
+    -Dhttps.proxyHost=proxy-chain.intel.com
+    -Dhttps.proxyPort=912"
 
   ## Allows the specification of additional environment variables for Keycloak
   extraEnv: |
@@ -149,8 +146,6 @@ keycloak:
   priorityClassName: ""
   tolerations: []
 
-  ## Additional pod labels
-  ## ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
   podLabels: {}
 
   ## Extra Annotations to be added to pod
@@ -183,7 +178,7 @@ keycloak:
   pki:
     enabled: true
     keystore:
-      alias: keycloak
+      alias: kc
       password: ''
     truststore:
       password: ''
