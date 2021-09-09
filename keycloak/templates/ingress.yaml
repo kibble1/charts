@@ -1,7 +1,7 @@
 {{- $ingress := .Values.keycloak.ingress -}}
 {{- $pki := .Values.keycloak.pki -}}
 {{- if $ingress.enabled -}}
-apiVersion: extensions/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ include "keycloak.fullname" . }}
