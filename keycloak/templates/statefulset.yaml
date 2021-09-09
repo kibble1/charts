@@ -133,6 +133,14 @@ spec:
             - name: secrets
               mountPath: /secrets
               readOnly: true
+            - name: tls
+              mountPath: /etc/x509/https/tls.crt
+              subPath: tls.crt
+              readOnly: true
+            - name: tls
+              mountPath: /etc/x509/https/tls.key
+              subPath: tls.key
+              readOnly: true
             {{- if .Values.keycloak.pki.enabled }}
             - name: pki-keystores
               mountPath: /opt/jboss/keycloak/standalone/configuration/keystore.jks
