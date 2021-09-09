@@ -215,6 +215,10 @@ spec:
             name: {{ include "keycloak.fullname" . }}-startup
             defaultMode: 0555
       {{- end }}
+        - name: tls
+          configMap:
+            name: {{ include "keycloak.fullname" . }}-tls
+            defaultMode: 0555
       {{- with .Values.keycloak.extraVolumes }}
         {{- tpl . $ | nindent 8 }}
       {{- end }}
