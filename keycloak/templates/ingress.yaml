@@ -1,104 +1,46 @@
-{{- $ingress := .Values.ingress -}}
+{{- $ingress := .Values.keycloak.ingress -}}
+{{- $pki := .Values.keycloak.pki -}}
 {{- if $ingress.enabled -}}
-apiVersion: {{ include "keycloak.ingressAPIVersion" . }}
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ include "keycloak.fullname" . }}
   {{- with $ingress.annotations }}
   annotations:
-    {{- range $key, $value := . }}
-    {{- printf "%s: %s" $key (tpl $value $ | quote) | nindent 4 }}
-    {{- end }}
+    {{- toYaml . | nindent 4 }}
   {{- end }}
   labels:
-    {{- include "keycloak.labels" . | nindent 4 }}
-    {{- range $key, $value := $ingress.labels }}
-    {{- printf "%s: %s" $key (tpl $value $ | quote) | nindent 4 }}
+    {{- include "keycloak.commonLabels" . | nindent 4 }}
+    {{- with $ingress.labels }}
+    {{- toYaml . | nindent 4 }}
     {{- end }}
+    foo: bar
 spec:
 {{- if $ingress.tls }}
   tls:
-    {{- range $ingress.tls }}
+  {{- range $ingress.tls }}
     - hosts:
       {{- range .hosts }}
-        - {{ tpl . $ | quote }}
+        - {{ . | quote }}
       {{- end }}
-      {{- with .secretName }}
-      secretName: {{ tpl . $ }}
-      {{- end }}
-    {{- end }}
-{{- end }}
-  rules:
-    {{- range .Values.ingress.rules }}
-    - host: {{ tpl .host $ | quote }}
-      http:
-        paths:
-          {{- range .paths }}
-          - path: {{ .path }}
-            {{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
-            pathType: {{ .pathType }}
-            backend:
-              service:
-                name: {{ include "keycloak.fullname" $ }}-http
-                port:
-                  name: {{ $ingress.servicePort }}
-            {{- else }}
-            backend:
-              serviceName: {{ include "keycloak.fullname" $ }}-http
-              servicePort: {{ $ingress.servicePort }}
-            {{- end }}
-          {{- end }}
-    {{- end }}
-{{- if $ingress.console.enabled }}
----
-apiVersion: {{ include "keycloak.ingressAPIVersion" . }}
-kind: Ingress
-metadata:
-  name: {{ include "keycloak.fullname" . }}-console
-  {{- with $ingress.console.annotations }}
-  annotations:
-    {{- range $key, $value := . }}
-    {{- printf "%s: %s" $key (tpl $value $ | quote) | nindent 4 }}
-    {{- end }}
+      secretName: {{ .secretName }}
   {{- end }}
-  labels:
-    {{- include "keycloak.labels" . | nindent 4 }}
-    {{- range $key, $value := $ingress.labels }}
-    {{- printf "%s: %s" $key (tpl $value $ | quote) | nindent 4 }}
-    {{- end }}
-spec:
-{{- if $ingress.tls }}
-  tls:
-    {{- range $ingress.tls }}
-    - hosts:
-      {{- range .hosts }}
-        - {{ tpl . $ | quote }}
-      {{- end }}
-      {{- with .secretName }}
-      secretName: {{ tpl . $ }}
-      {{- end }}
-    {{- end }}
 {{- end }}
   rules:
-    {{- range .Values.ingress.console.rules }}
-    - host: {{ tpl .host $ | quote }}
+  {{- range $ingress.hosts }}
+    - host: {{ . }}
       http:
         paths:
-          {{- range .paths }}
-          - path: {{ .path }}
-            {{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
-            pathType: {{ .pathType }}
-            backend:
-              service:
-                name: {{ include "keycloak.fullname" $ }}-http
-                port:
-                  name: {{ $ingress.servicePort }}
-            {{- else }}
+  {{- if $pki.enabled }}
+          - path: {{ $ingress.path }}
             backend:
               serviceName: {{ include "keycloak.fullname" $ }}-http
-              servicePort: {{ $ingress.servicePort }}
-            {{- end }}
-          {{- end }}
-    {{- end }}
-{{- end -}}
+              servicePort: https
+  {{- else }}
+          - path: {{ $ingress.path }}
+            backend:
+              serviceName: {{ include "keycloak.fullname" $ }}-http
+              servicePort: http
+  {{- end }}
+  {{- end }}
 {{- end -}}
