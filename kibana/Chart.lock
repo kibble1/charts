@@ -1,4 +1,0 @@
-dependencies:
-- name: common
-  repository: https://kibble1.github.io/charts/
-  version: 1.7.0

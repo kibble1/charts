@@ -1,9 +1,0 @@
-questions:
-  - variable: .Values.name
-    default: "elastic"
-    description: "Elasticsearch cluster name"
-    required: true
-  - variable: .Values.plugins
-    default: null
-    description: "plugins Comma, semi-colon or space separated list of plugins to install at initialization"
-    required: false
